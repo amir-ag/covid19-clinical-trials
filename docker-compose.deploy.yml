@@ -1,0 +1,22 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - /etc/letsencrypt:/etc/letsencrypt
+      - frontend:/frontend
+
+  frontend:
+    image: frontend:latest
+    command: "sh /scripts/run.sh"
+    volumes:
+      - frontend:/frontend-build
+      - ./scripts:/scripts
+
+
+volumes:
+  frontend:

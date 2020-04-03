@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  frontend:
+    image: frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/frontend
+#     command: "tail -f /dev/null"
+#
+# volumes:
+#   postgresdb:
