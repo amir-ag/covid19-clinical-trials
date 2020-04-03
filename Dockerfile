@@ -1,5 +1,7 @@
 FROM ubuntu:18.04
 
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+
 RUN apt update && apt upgrade -y && apt install -qqy \
     wget \
     bzip2 \
@@ -9,20 +11,22 @@ RUN apt update && apt upgrade -y && apt install -qqy \
 RUN mkdir /scripts
 RUN mkdir /nginx
 
-# pass all the files and folders from local folder to image
-COPY ./frontend /frontend
+
+COPY ./frontend/ /frontend
 
 COPY ./scripts/* /scripts/
 RUN chmod +x /scripts/*
 
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get install -y nodejs && apt-get install -y npm
+RUN curl -sL https://deb.nodesource.com/setup_13.x | bash - && apt-get install -y nodejs && apt-get install -y npm
 
-# set the working directory to /app for whenever you login into your container
+
 WORKDIR /frontend
 COPY ./frontend/package.json /frontend/
 COPY ./frontend/package-lock.json /frontend/
-RUN npm i
+RUN npm install -g npm@latest
+RUN npm cache verify
 COPY ./frontend /frontend
 RUN npm run build
 
 WORKDIR /frontend
+

@@ -7,7 +7,7 @@ services:
       - "3000:3000"
     volumes:
       - ./frontend:/frontend
-#     command: "tail -f /dev/null"
+    command: "tail -f /dev/null"
 #
 # volumes:
 #   postgresdb:
