@@ -20,12 +20,13 @@ RUN chmod +x /scripts/*
 RUN curl -sL https://deb.nodesource.com/setup_13.x | bash - && apt-get install -y nodejs && apt-get install -y npm
 
 
-WORKDIR /frontend
 COPY ./frontend/package.json /frontend/
 COPY ./frontend/package-lock.json /frontend/
+WORKDIR /frontend
 RUN npm install -g npm@latest
 RUN npm cache verify
 COPY ./frontend /frontend
+WORKDIR /frontend
 RUN npm run build
 
 WORKDIR /frontend
