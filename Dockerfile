@@ -8,26 +8,31 @@ RUN apt update && apt upgrade -y && apt install -qqy \
     libssl-dev \
     openssh-server
 
-RUN mkdir /scripts
-RUN mkdir /nginx
+RUN curl -sL https://deb.nodesource.com/setup_13.x | bash - && apt-get install -y nodejs && apt-get install -y npm
+RUN npm install -g npm@latest
 
-
-COPY ./frontend/ /frontend
-
+RUN mkdir -p /scripts
 COPY ./scripts/* /scripts/
 RUN chmod +x /scripts/*
 
-RUN curl -sL https://deb.nodesource.com/setup_13.x | bash - && apt-get install -y nodejs && apt-get install -y npm
+#RUN mkdir -p /nginx
+RUN mkdir -p /frontend
+RUN mkdir -p /frontend_tmp
+WORKDIR frontend_tmp
 
-
-WORKDIR /frontend
-COPY ./frontend/package.json /frontend/
-#COPY ./frontend/package-lock.json /frontend/
-#RUN npm i
-RUN npm install -g npm@latest
-COPY ./frontend /frontend
+COPY ./frontend/package.json /frontend_tmp
 #RUN npm cache verify
+RUN npm i
+COPY ./frontend /frontend_tmp
 RUN npm run build
 
+
 WORKDIR /frontend
+
+
+
+
+
+
+
 

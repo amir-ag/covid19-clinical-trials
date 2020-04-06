@@ -1,4 +1,2 @@
-rm -rf /frontend-build/*
-cp -r /frontend/build/* /frontend-build
-
-npm start
+rm -rf /frontend/build/* && cp -r /frontend_tmp/* /frontend
+#npm start
