@@ -8,6 +8,7 @@ services:
     volumes:
       - ./frontend:/frontend
     command: "tail -f /dev/null"
-#
+
 # volumes:
 #   postgresdb:
+
