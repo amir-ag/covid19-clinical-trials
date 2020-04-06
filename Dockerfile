@@ -23,8 +23,8 @@ RUN curl -sL https://deb.nodesource.com/setup_13.x | bash - && apt-get install -
 WORKDIR /frontend
 COPY ./frontend/package.json /frontend/
 #COPY ./frontend/package-lock.json /frontend/
-RUN npm i
-#RUN npm install -g npm@latest
+#RUN npm i
+RUN npm install -g npm@latest
 COPY ./frontend /frontend
 #RUN npm cache verify
 RUN npm run build
