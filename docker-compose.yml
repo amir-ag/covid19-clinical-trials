@@ -2,7 +2,7 @@ version: '3'
 
 services:
   frontend:
-    image: frontend
+    image: registry.gitlab.propulsion-home.ch/covid-dashboard/dashboard:latest
     ports:
       - "3000:3000"
     volumes:

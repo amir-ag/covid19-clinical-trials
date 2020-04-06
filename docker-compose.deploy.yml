@@ -11,7 +11,7 @@ services:
       - frontend:/frontend
 
   frontend:
-    image: frontend:latest
+    image: registry.gitlab.propulsion-home.ch/covid-dashboard/dashboard:latest
     command: "sh /scripts/run.sh"
     volumes:
       - frontend:/frontend-build
