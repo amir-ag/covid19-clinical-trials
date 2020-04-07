@@ -1,0 +1,2492 @@
+{
+    "cities": {
+        "results": [
+            {
+            "name": "Andorra la Vella",
+            "isCapital": true,
+            "country": {
+                "name": "Andorra"
+            },
+            "location": {
+                "latitude": 42.50779,
+                "longitude": 1.52109
+            }
+            },
+            {
+            "name": "Abu Dhabi",
+            "isCapital": true,
+            "country": {
+                "name": "United Arab Emirates"
+            },
+            "location": {
+                "latitude": 24.46667,
+                "longitude": 54.36667
+            }
+            },
+            {
+            "name": "Kabul",
+            "isCapital": true,
+            "country": {
+                "name": "Afghanistan"
+            },
+            "location": {
+                "latitude": 34.52813,
+                "longitude": 69.17233
+            }
+            },
+            {
+            "name": "The Valley",
+            "isCapital": true,
+            "country": {
+                "name": "Anguilla"
+            },
+            "location": {
+                "latitude": 18.21704,
+                "longitude": -63.05783
+            }
+            },
+            {
+            "name": "Tirana",
+            "isCapital": true,
+            "country": {
+                "name": "Albania"
+            },
+            "location": {
+                "latitude": 41.3275,
+                "longitude": 19.81889
+            }
+            },
+            {
+            "name": "Yerevan",
+            "isCapital": true,
+            "country": {
+                "name": "Armenia"
+            },
+            "location": {
+                "latitude": 40.18111,
+                "longitude": 44.51361
+            }
+            },
+            {
+            "name": "Luanda",
+            "isCapital": true,
+            "country": {
+                "name": "Angola"
+            },
+            "location": {
+                "latitude": -8.83682,
+                "longitude": 13.23432
+            }
+            },
+            {
+            "name": "Buenos Aires",
+            "isCapital": true,
+            "country": {
+                "name": "Argentina"
+            },
+            "location": {
+                "latitude": -34.61315,
+                "longitude": -58.37723
+            }
+            },
+            {
+            "name": "Pago Pago",
+            "isCapital": true,
+            "country": {
+                "name": "American Samoa"
+            },
+            "location": {
+                "latitude": -14.27806,
+                "longitude": -170.7025
+            }
+            },
+            {
+            "name": "Vienna",
+            "isCapital": true,
+            "country": {
+                "name": "Austria"
+            },
+            "location": {
+                "latitude": 48.20849,
+                "longitude": 16.37208
+            }
+            },
+            {
+            "name": "Canberra",
+            "isCapital": true,
+            "country": {
+                "name": "Australia"
+            },
+            "location": {
+                "latitude": -35.28346,
+                "longitude": 149.12807
+            }
+            },
+            {
+            "name": "Oranjestad",
+            "isCapital": true,
+            "country": {
+                "name": "Aruba"
+            },
+            "location": {
+                "latitude": 12.52398,
+                "longitude": -70.02703
+            }
+            },
+            {
+            "name": "Mariehamn",
+            "isCapital": true,
+            "country": {
+                "name": "Åland"
+            },
+            "location": {
+                "latitude": 60.09726,
+                "longitude": 19.93481
+            }
+            },
+            {
+            "name": "Baku",
+            "isCapital": true,
+            "country": {
+                "name": "Azerbaijan"
+            },
+            "location": {
+                "latitude": 40.37767,
+                "longitude": 49.89201
+            }
+            },
+            {
+            "name": "Sarajevo",
+            "isCapital": true,
+            "country": {
+                "name": "Bosnia and Herzegovina"
+            },
+            "location": {
+                "latitude": 43.84864,
+                "longitude": 18.35644
+            }
+            },
+            {
+            "name": "Bridgetown",
+            "isCapital": true,
+            "country": {
+                "name": "Barbados"
+            },
+            "location": {
+                "latitude": 13.10732,
+                "longitude": -59.62021
+            }
+            },
+            {
+            "name": "Dhaka",
+            "isCapital": true,
+            "country": {
+                "name": "Bangladesh"
+            },
+            "location": {
+                "latitude": 23.7104,
+                "longitude": 90.40744
+            }
+            },
+            {
+            "name": "Brussels",
+            "isCapital": true,
+            "country": {
+                "name": "Belgium"
+            },
+            "location": {
+                "latitude": 50.85045,
+                "longitude": 4.34878
+            }
+            },
+            {
+            "name": "Ouagadougou",
+            "isCapital": true,
+            "country": {
+                "name": "Burkina Faso"
+            },
+            "location": {
+                "latitude": 12.36566,
+                "longitude": -1.53388
+            }
+            },
+            {
+            "name": "Sofia",
+            "isCapital": true,
+            "country": {
+                "name": "Bulgaria"
+            },
+            "location": {
+                "latitude": 42.69751,
+                "longitude": 23.32415
+            }
+            },
+            {
+            "name": "Manama",
+            "isCapital": true,
+            "country": {
+                "name": "Bahrain"
+            },
+            "location": {
+                "latitude": 26.22787,
+                "longitude": 50.58565
+            }
+            },
+            {
+            "name": "Bujumbura",
+            "isCapital": true,
+            "country": {
+                "name": "Burundi"
+            },
+            "location": {
+                "latitude": -3.3822,
+                "longitude": 29.3644
+            }
+            },
+            {
+            "name": "Porto-Novo",
+            "isCapital": true,
+            "country": {
+                "name": "Benin"
+            },
+            "location": {
+                "latitude": 6.49646,
+                "longitude": 2.60359
+            }
+            },
+            {
+            "name": "Gustavia",
+            "isCapital": true,
+            "country": {
+                "name": "Saint Barthélemy"
+            },
+            "location": {
+                "latitude": 17.89618,
+                "longitude": -62.84978
+            }
+            },
+            {
+            "name": "Hamilton",
+            "isCapital": true,
+            "country": {
+                "name": "Bermuda"
+            },
+            "location": {
+                "latitude": 32.2949,
+                "longitude": -64.78303
+            }
+            },
+            {
+            "name": "Bandar Seri Begawan",
+            "isCapital": true,
+            "country": {
+                "name": "Brunei"
+            },
+            "location": {
+                "latitude": 4.89035,
+                "longitude": 114.94006
+            }
+            },
+            {
+            "name": "Sucre",
+            "isCapital": true,
+            "country": {
+                "name": "Bolivia"
+            },
+            "location": {
+                "latitude": -19.03332,
+                "longitude": -65.26274
+            }
+            },
+            {
+            "name": "Kralendijk",
+            "isCapital": true,
+            "country": {
+                "name": "Bonaire"
+            },
+            "location": {
+                "latitude": 12.15,
+                "longitude": -68.26667
+            }
+            },
+            {
+            "name": "Brasília",
+            "isCapital": true,
+            "country": {
+                "name": "Brazil"
+            },
+            "location": {
+                "latitude": -15.77972,
+                "longitude": -47.92972
+            }
+            },
+            {
+            "name": "Nassau",
+            "isCapital": true,
+            "country": {
+                "name": "Bahamas"
+            },
+            "location": {
+                "latitude": 25.05823,
+                "longitude": -77.34306
+            }
+            },
+            {
+            "name": "Thimphu",
+            "isCapital": true,
+            "country": {
+                "name": "Bhutan"
+            },
+            "location": {
+                "latitude": 27.46609,
+                "longitude": 89.64191
+            }
+            },
+            {
+            "name": "Gaborone",
+            "isCapital": true,
+            "country": {
+                "name": "Botswana"
+            },
+            "location": {
+                "latitude": -24.65451,
+                "longitude": 25.90859
+            }
+            },
+            {
+            "name": "Minsk",
+            "isCapital": true,
+            "country": {
+                "name": "Belarus"
+            },
+            "location": {
+                "latitude": 53.9,
+                "longitude": 27.56667
+            }
+            },
+            {
+            "name": "Belmopan",
+            "isCapital": true,
+            "country": {
+                "name": "Belize"
+            },
+            "location": {
+                "latitude": 17.25,
+                "longitude": -88.76667
+            }
+            },
+            {
+            "name": "Ottawa",
+            "isCapital": true,
+            "country": {
+                "name": "Canada"
+            },
+            "location": {
+                "latitude": 45.41117,
+                "longitude": -75.69812
+            }
+            },
+            {
+            "name": "West Island",
+            "isCapital": true,
+            "country": {
+                "name": "Cocos [Keeling] Islands"
+            },
+            "location": {
+                "latitude": -12.15681,
+                "longitude": 96.82251
+            }
+            },
+            {
+            "name": "Kinshasa",
+            "isCapital": true,
+            "country": {
+                "name": "Democratic Republic of the Congo"
+            },
+            "location": {
+                "latitude": -4.32758,
+                "longitude": 15.31357
+            }
+            },
+            {
+            "name": "Bangui",
+            "isCapital": true,
+            "country": {
+                "name": "Central African Republic"
+            },
+            "location": {
+                "latitude": 4.36122,
+                "longitude": 18.55496
+            }
+            },
+            {
+            "name": "Brazzaville",
+            "isCapital": true,
+            "country": {
+                "name": "Republic of the Congo"
+            },
+            "location": {
+                "latitude": -4.26613,
+                "longitude": 15.28318
+            }
+            },
+            {
+            "name": "Bern",
+            "isCapital": true,
+            "country": {
+                "name": "Switzerland"
+            },
+            "location": {
+                "latitude": 46.94809,
+                "longitude": 7.44744
+            }
+            },
+            {
+            "name": "Yamoussoukro",
+            "isCapital": true,
+            "country": {
+                "name": "Ivory Coast"
+            },
+            "location": {
+                "latitude": 6.82055,
+                "longitude": -5.27674
+            }
+            },
+            {
+            "name": "Avarua",
+            "isCapital": true,
+            "country": {
+                "name": "Cook Islands"
+            },
+            "location": {
+                "latitude": -21.20778,
+                "longitude": -159.775
+            }
+            },
+            {
+            "name": "Santiago",
+            "isCapital": true,
+            "country": {
+                "name": "Chile"
+            },
+            "location": {
+                "latitude": -33.45694,
+                "longitude": -70.64827
+            }
+            },
+            {
+            "name": "Yaoundé",
+            "isCapital": true,
+            "country": {
+                "name": "Cameroon"
+            },
+            "location": {
+                "latitude": 3.86667,
+                "longitude": 11.51667
+            }
+            },
+            {
+            "name": "Beijing",
+            "isCapital": true,
+            "country": {
+                "name": "China"
+            },
+            "location": {
+                "latitude": 39.9075,
+                "longitude": 116.39723
+            }
+            },
+            {
+            "name": "Bogotá",
+            "isCapital": true,
+            "country": {
+                "name": "Colombia"
+            },
+            "location": {
+                "latitude": 4.60971,
+                "longitude": -74.08175
+            }
+            },
+            {
+            "name": "San José",
+            "isCapital": true,
+            "country": {
+                "name": "Costa Rica"
+            },
+            "location": {
+                "latitude": 9.93333,
+                "longitude": -84.08333
+            }
+            },
+            {
+            "name": "San José",
+            "isCapital": true,
+            "country": {
+                "name": "Costa Rica"
+            },
+            "location": {
+                "latitude": 10.95173,
+                "longitude": -85.1361
+            }
+            },
+            {
+            "name": "Havana",
+            "isCapital": true,
+            "country": {
+                "name": "Cuba"
+            },
+            "location": {
+                "latitude": 23.13302,
+                "longitude": -82.38304
+            }
+            },
+            {
+            "name": "Praia",
+            "isCapital": true,
+            "country": {
+                "name": "Cape Verde"
+            },
+            "location": {
+                "latitude": 14.93152,
+                "longitude": -23.51254
+            }
+            },
+            {
+            "name": "Willemstad",
+            "isCapital": true,
+            "country": {
+                "name": "Curacao"
+            },
+            "location": {
+                "latitude": 12.1084,
+                "longitude": -68.93354
+            }
+            },
+            {
+            "name": "Flying Fish Cove",
+            "isCapital": true,
+            "country": {
+                "name": "Christmas Island"
+            },
+            "location": {
+                "latitude": -10.42172,
+                "longitude": 105.67912
+            }
+            },
+            {
+            "name": "Nicosia",
+            "isCapital": true,
+            "country": {
+                "name": "Cyprus"
+            },
+            "location": {
+                "latitude": 35.17531,
+                "longitude": 33.3642
+            }
+            },
+            {
+            "name": "Prague",
+            "isCapital": true,
+            "country": {
+                "name": "Czech Republic"
+            },
+            "location": {
+                "latitude": 50.08804,
+                "longitude": 14.42076
+            }
+            },
+            {
+            "name": "Berlin",
+            "isCapital": true,
+            "country": {
+                "name": "Germany"
+            },
+            "location": {
+                "latitude": 52.52437,
+                "longitude": 13.41053
+            }
+            },
+            {
+            "name": "Djibouti",
+            "isCapital": true,
+            "country": {
+                "name": "Djibouti"
+            },
+            "location": {
+                "latitude": 11.58901,
+                "longitude": 43.14503
+            }
+            },
+            {
+            "name": "Copenhagen",
+            "isCapital": true,
+            "country": {
+                "name": "Denmark"
+            },
+            "location": {
+                "latitude": 55.67594,
+                "longitude": 12.56553
+            }
+            },
+            {
+            "name": "Roseau",
+            "isCapital": true,
+            "country": {
+                "name": "Dominica"
+            },
+            "location": {
+                "latitude": 15.30174,
+                "longitude": -61.38808
+            }
+            },
+            {
+            "name": "Santo Domingo",
+            "isCapital": true,
+            "country": {
+                "name": "Dominican Republic"
+            },
+            "location": {
+                "latitude": 18.47186,
+                "longitude": -69.89232
+            }
+            },
+            {
+            "name": "Algiers",
+            "isCapital": true,
+            "country": {
+                "name": "Algeria"
+            },
+            "location": {
+                "latitude": 36.73225,
+                "longitude": 3.08746
+            }
+            },
+            {
+            "name": "Quito",
+            "isCapital": true,
+            "country": {
+                "name": "Ecuador"
+            },
+            "location": {
+                "latitude": -0.22985,
+                "longitude": -78.52495
+            }
+            },
+            {
+            "name": "Tallinn",
+            "isCapital": true,
+            "country": {
+                "name": "Estonia"
+            },
+            "location": {
+                "latitude": 59.43696,
+                "longitude": 24.75353
+            }
+            },
+            {
+            "name": "Cairo",
+            "isCapital": true,
+            "country": {
+                "name": "Egypt"
+            },
+            "location": {
+                "latitude": 30.06263,
+                "longitude": 31.24967
+            }
+            },
+            {
+            "name": "Asmara",
+            "isCapital": true,
+            "country": {
+                "name": "Eritrea"
+            },
+            "location": {
+                "latitude": 15.33805,
+                "longitude": 38.93184
+            }
+            },
+            {
+            "name": "Madrid",
+            "isCapital": true,
+            "country": {
+                "name": "Spain"
+            },
+            "location": {
+                "latitude": 40.4165,
+                "longitude": -3.70256
+            }
+            },
+            {
+            "name": "Addis Ababa",
+            "isCapital": true,
+            "country": {
+                "name": "Ethiopia"
+            },
+            "location": {
+                "latitude": 9.02497,
+                "longitude": 38.74689
+            }
+            },
+            {
+            "name": "Helsinki",
+            "isCapital": true,
+            "country": {
+                "name": "Finland"
+            },
+            "location": {
+                "latitude": 60.16952,
+                "longitude": 24.93545
+            }
+            },
+            {
+            "name": "Suva",
+            "isCapital": true,
+            "country": {
+                "name": "Fiji"
+            },
+            "location": {
+                "latitude": -18.14161,
+                "longitude": 178.44149
+            }
+            },
+            {
+            "name": "Stanley",
+            "isCapital": true,
+            "country": {
+                "name": "Falkland Islands"
+            },
+            "location": {
+                "latitude": -51.7,
+                "longitude": -57.85
+            }
+            },
+            {
+            "name": "Tórshavn",
+            "isCapital": true,
+            "country": {
+                "name": "Faroe Islands"
+            },
+            "location": {
+                "latitude": 62.00973,
+                "longitude": -6.77164
+            }
+            },
+            {
+            "name": "Paris",
+            "isCapital": true,
+            "country": {
+                "name": "France"
+            },
+            "location": {
+                "latitude": 48.85341,
+                "longitude": 2.3488
+            }
+            },
+            {
+            "name": "Libreville",
+            "isCapital": true,
+            "country": {
+                "name": "Gabon"
+            },
+            "location": {
+                "latitude": 0.39241,
+                "longitude": 9.45356
+            }
+            },
+            {
+            "name": "London",
+            "isCapital": true,
+            "country": {
+                "name": "United Kingdom"
+            },
+            "location": {
+                "latitude": 51.50853,
+                "longitude": -0.12574
+            }
+            },
+            {
+            "name": "Tbilisi",
+            "isCapital": true,
+            "country": {
+                "name": "Georgia"
+            },
+            "location": {
+                "latitude": 41.69411,
+                "longitude": 44.83368
+            }
+            },
+            {
+            "name": "Cayenne",
+            "isCapital": true,
+            "country": {
+                "name": "French Guiana"
+            },
+            "location": {
+                "latitude": 4.93333,
+                "longitude": -52.33333
+            }
+            },
+            {
+            "name": "Accra",
+            "isCapital": true,
+            "country": {
+                "name": "Ghana"
+            },
+            "location": {
+                "latitude": 5.55602,
+                "longitude": -0.1969
+            }
+            },
+            {
+            "name": "Gibraltar",
+            "isCapital": true,
+            "country": {
+                "name": "Gibraltar"
+            },
+            "location": {
+                "latitude": 36.14474,
+                "longitude": -5.35257
+            }
+            },
+            {
+            "name": "Nuuk",
+            "isCapital": true,
+            "country": {
+                "name": "Greenland"
+            },
+            "location": {
+                "latitude": 64.18347,
+                "longitude": -51.72157
+            }
+            },
+            {
+            "name": "Banjul",
+            "isCapital": true,
+            "country": {
+                "name": "Gambia"
+            },
+            "location": {
+                "latitude": 13.45274,
+                "longitude": -16.57803
+            }
+            },
+            {
+            "name": "Conakry",
+            "isCapital": true,
+            "country": {
+                "name": "Guinea"
+            },
+            "location": {
+                "latitude": 9.53795,
+                "longitude": -13.67729
+            }
+            },
+            {
+            "name": "Basse-Terre",
+            "isCapital": true,
+            "country": {
+                "name": "Guadeloupe"
+            },
+            "location": {
+                "latitude": 15.99714,
+                "longitude": -61.73214
+            }
+            },
+            {
+            "name": "Malabo",
+            "isCapital": true,
+            "country": {
+                "name": "Equatorial Guinea"
+            },
+            "location": {
+                "latitude": 3.75578,
+                "longitude": 8.78166
+            }
+            },
+            {
+            "name": "Athens",
+            "isCapital": true,
+            "country": {
+                "name": "Greece"
+            },
+            "location": {
+                "latitude": 37.97945,
+                "longitude": 23.71622
+            }
+            },
+            {
+            "name": "Guatemala City",
+            "isCapital": true,
+            "country": {
+                "name": "Guatemala"
+            },
+            "location": {
+                "latitude": 14.64072,
+                "longitude": -90.51327
+            }
+            },
+            {
+            "name": "Hagåtña",
+            "isCapital": true,
+            "country": {
+                "name": "Guam"
+            },
+            "location": {
+                "latitude": 13.47567,
+                "longitude": 144.74886
+            }
+            },
+            {
+            "name": "Bissau",
+            "isCapital": true,
+            "country": {
+                "name": "Guinea-Bissau"
+            },
+            "location": {
+                "latitude": 11.86357,
+                "longitude": -15.59767
+            }
+            },
+            {
+            "name": "Georgetown",
+            "isCapital": true,
+            "country": {
+                "name": "Guyana"
+            },
+            "location": {
+                "latitude": 6.80448,
+                "longitude": -58.15527
+            }
+            },
+            {
+            "name": "Tegucigalpa",
+            "isCapital": true,
+            "country": {
+                "name": "Honduras"
+            },
+            "location": {
+                "latitude": 14.0818,
+                "longitude": -87.20681
+            }
+            },
+            {
+            "name": "Zagreb",
+            "isCapital": true,
+            "country": {
+                "name": "Croatia"
+            },
+            "location": {
+                "latitude": 45.81444,
+                "longitude": 15.97798
+            }
+            },
+            {
+            "name": "Port-au-Prince",
+            "isCapital": true,
+            "country": {
+                "name": "Haiti"
+            },
+            "location": {
+                "latitude": 18.54349,
+                "longitude": -72.33881
+            }
+            },
+            {
+            "name": "Budapest",
+            "isCapital": true,
+            "country": {
+                "name": "Hungary"
+            },
+            "location": {
+                "latitude": 47.49801,
+                "longitude": 19.03991
+            }
+            },
+            {
+            "name": "Jakarta",
+            "isCapital": true,
+            "country": {
+                "name": "Indonesia"
+            },
+            "location": {
+                "latitude": -6.21462,
+                "longitude": 106.84513
+            }
+            },
+            {
+            "name": "Dublin",
+            "isCapital": true,
+            "country": {
+                "name": "Ireland"
+            },
+            "location": {
+                "latitude": 53.33306,
+                "longitude": -6.24889
+            }
+            },
+            {
+            "name": "Jerusalem",
+            "isCapital": true,
+            "country": {
+                "name": "Israel"
+            },
+            "location": {
+                "latitude": 31.76904,
+                "longitude": 35.21633
+            }
+            },
+            {
+            "name": "Douglas",
+            "isCapital": true,
+            "country": {
+                "name": "Isle of Man"
+            },
+            "location": {
+                "latitude": 54.15,
+                "longitude": -4.48333
+            }
+            },
+            {
+            "name": "New Delhi",
+            "isCapital": true,
+            "country": {
+                "name": "India"
+            },
+            "location": {
+                "latitude": 28.63576,
+                "longitude": 77.22445
+            }
+            },
+            {
+            "name": "Baghdad",
+            "isCapital": true,
+            "country": {
+                "name": "Iraq"
+            },
+            "location": {
+                "latitude": 33.34058,
+                "longitude": 44.40088
+            }
+            },
+            {
+            "name": "Tehran",
+            "isCapital": true,
+            "country": {
+                "name": "Iran"
+            },
+            "location": {
+                "latitude": 35.69439,
+                "longitude": 51.42151
+            }
+            },
+            {
+            "name": "Rome",
+            "isCapital": true,
+            "country": {
+                "name": "Italy"
+            },
+            "location": {
+                "latitude": 41.89193,
+                "longitude": 12.51133
+            }
+            },
+            {
+            "name": "Saint Helier",
+            "isCapital": true,
+            "country": {
+                "name": "Jersey"
+            },
+            "location": {
+                "latitude": 49.18804,
+                "longitude": -2.10491
+            }
+            },
+            {
+            "name": "Kingston",
+            "isCapital": true,
+            "country": {
+                "name": "Jamaica"
+            },
+            "location": {
+                "latitude": 17.99702,
+                "longitude": -76.79358
+            }
+            },
+            {
+            "name": "Amman",
+            "isCapital": true,
+            "country": {
+                "name": "Jordan"
+            },
+            "location": {
+                "latitude": 31.95522,
+                "longitude": 35.94503
+            }
+            },
+            {
+            "name": "Tokyo",
+            "isCapital": true,
+            "country": {
+                "name": "Japan"
+            },
+            "location": {
+                "latitude": 35.6895,
+                "longitude": 139.69171
+            }
+            },
+            {
+            "name": "Nairobi",
+            "isCapital": true,
+            "country": {
+                "name": "Kenya"
+            },
+            "location": {
+                "latitude": -1.28333,
+                "longitude": 36.81667
+            }
+            },
+            {
+            "name": "Bishkek",
+            "isCapital": true,
+            "country": {
+                "name": "Kyrgyzstan"
+            },
+            "location": {
+                "latitude": 42.87,
+                "longitude": 74.59
+            }
+            },
+            {
+            "name": "Phnom Penh",
+            "isCapital": true,
+            "country": {
+                "name": "Cambodia"
+            },
+            "location": {
+                "latitude": 11.56245,
+                "longitude": 104.91601
+            }
+            },
+            {
+            "name": "Moroni",
+            "isCapital": true,
+            "country": {
+                "name": "Comoros"
+            },
+            "location": {
+                "latitude": -11.70216,
+                "longitude": 43.25506
+            }
+            },
+            {
+            "name": "Basseterre",
+            "isCapital": true,
+            "country": {
+                "name": "Saint Kitts and Nevis"
+            },
+            "location": {
+                "latitude": 17.2955,
+                "longitude": -62.72499
+            }
+            },
+            {
+            "name": "Pyongyang",
+            "isCapital": true,
+            "country": {
+                "name": "North Korea"
+            },
+            "location": {
+                "latitude": 39.03385,
+                "longitude": 125.75432
+            }
+            },
+            {
+            "name": "Seoul",
+            "isCapital": true,
+            "country": {
+                "name": "South Korea"
+            },
+            "location": {
+                "latitude": 37.566,
+                "longitude": 126.9784
+            }
+            },
+            {
+            "name": "Kuwait City",
+            "isCapital": true,
+            "country": {
+                "name": "Kuwait"
+            },
+            "location": {
+                "latitude": 29.36972,
+                "longitude": 47.97833
+            }
+            },
+            {
+            "name": "George Town",
+            "isCapital": true,
+            "country": {
+                "name": "Cayman Islands"
+            },
+            "location": {
+                "latitude": 19.2866,
+                "longitude": -81.37436
+            }
+            },
+            {
+            "name": "Astana",
+            "isCapital": true,
+            "country": {
+                "name": "Kazakhstan"
+            },
+            "location": {
+                "latitude": 51.1801,
+                "longitude": 71.44598
+            }
+            },
+            {
+            "name": "Vientiane",
+            "isCapital": true,
+            "country": {
+                "name": "Laos"
+            },
+            "location": {
+                "latitude": 17.96667,
+                "longitude": 102.6
+            }
+            },
+            {
+            "name": "Beirut",
+            "isCapital": true,
+            "country": {
+                "name": "Lebanon"
+            },
+            "location": {
+                "latitude": 33.89332,
+                "longitude": 35.50157
+            }
+            },
+            {
+            "name": "Castries",
+            "isCapital": true,
+            "country": {
+                "name": "Saint Lucia"
+            },
+            "location": {
+                "latitude": 13.9957,
+                "longitude": -61.00614
+            }
+            },
+            {
+            "name": "Vaduz",
+            "isCapital": true,
+            "country": {
+                "name": "Liechtenstein"
+            },
+            "location": {
+                "latitude": 47.14151,
+                "longitude": 9.52154
+            }
+            },
+            {
+            "name": "Colombo",
+            "isCapital": true,
+            "country": {
+                "name": "Sri Lanka"
+            },
+            "location": {
+                "latitude": 6.93194,
+                "longitude": 79.84778
+            }
+            },
+            {
+            "name": "Monrovia",
+            "isCapital": true,
+            "country": {
+                "name": "Liberia"
+            },
+            "location": {
+                "latitude": 6.30054,
+                "longitude": -10.7969
+            }
+            },
+            {
+            "name": "Maseru",
+            "isCapital": true,
+            "country": {
+                "name": "Lesotho"
+            },
+            "location": {
+                "latitude": -29.31667,
+                "longitude": 27.48333
+            }
+            },
+            {
+            "name": "Vilnius",
+            "isCapital": true,
+            "country": {
+                "name": "Lithuania"
+            },
+            "location": {
+                "latitude": 54.68916,
+                "longitude": 25.2798
+            }
+            },
+            {
+            "name": "Luxembourg",
+            "isCapital": true,
+            "country": {
+                "name": "Luxembourg"
+            },
+            "location": {
+                "latitude": 49.61167,
+                "longitude": 6.13
+            }
+            },
+            {
+            "name": "Riga",
+            "isCapital": true,
+            "country": {
+                "name": "Latvia"
+            },
+            "location": {
+                "latitude": 56.946,
+                "longitude": 24.10589
+            }
+            },
+            {
+            "name": "Tripoli",
+            "isCapital": true,
+            "country": {
+                "name": "Libya"
+            },
+            "location": {
+                "latitude": 32.87519,
+                "longitude": 13.18746
+            }
+            },
+            {
+            "name": "Rabat",
+            "isCapital": true,
+            "country": {
+                "name": "Morocco"
+            },
+            "location": {
+                "latitude": 34.01325,
+                "longitude": -6.83255
+            }
+            },
+            {
+            "name": "Monaco",
+            "isCapital": true,
+            "country": {
+                "name": "Monaco"
+            },
+            "location": {
+                "latitude": 43.73333,
+                "longitude": 7.41667
+            }
+            },
+            {
+            "name": "Podgorica",
+            "isCapital": true,
+            "country": {
+                "name": "Montenegro"
+            },
+            "location": {
+                "latitude": 42.44111,
+                "longitude": 19.26361
+            }
+            },
+            {
+            "name": "Marigot",
+            "isCapital": true,
+            "country": {
+                "name": "Saint Martin"
+            },
+            "location": {
+                "latitude": 18.06819,
+                "longitude": -63.08302
+            }
+            },
+            {
+            "name": "Antananarivo",
+            "isCapital": true,
+            "country": {
+                "name": "Madagascar"
+            },
+            "location": {
+                "latitude": -18.91368,
+                "longitude": 47.53613
+            }
+            },
+            {
+            "name": "Majuro",
+            "isCapital": true,
+            "country": {
+                "name": "Marshall Islands"
+            },
+            "location": {
+                "latitude": 7.08971,
+                "longitude": 171.38027
+            }
+            },
+            {
+            "name": "Skopje",
+            "isCapital": true,
+            "country": {
+                "name": "North Macedonia"
+            },
+            "location": {
+                "latitude": 41.99646,
+                "longitude": 21.43141
+            }
+            },
+            {
+            "name": "Bamako",
+            "isCapital": true,
+            "country": {
+                "name": "Mali"
+            },
+            "location": {
+                "latitude": 12.65,
+                "longitude": -8
+            }
+            },
+            {
+            "name": "Ulan Bator",
+            "isCapital": true,
+            "country": {
+                "name": "Mongolia"
+            },
+            "location": {
+                "latitude": 47.90771,
+                "longitude": 106.88324
+            }
+            },
+            {
+            "name": "Saipan",
+            "isCapital": true,
+            "country": {
+                "name": "Northern Mariana Islands"
+            },
+            "location": {
+                "latitude": 15.21233,
+                "longitude": 145.7545
+            }
+            },
+            {
+            "name": "Fort-de-France",
+            "isCapital": true,
+            "country": {
+                "name": "Martinique"
+            },
+            "location": {
+                "latitude": 14.60365,
+                "longitude": -61.07418
+            }
+            },
+            {
+            "name": "Nouakchott",
+            "isCapital": true,
+            "country": {
+                "name": "Mauritania"
+            },
+            "location": {
+                "latitude": 18.08581,
+                "longitude": -15.9785
+            }
+            },
+            {
+            "name": "Plymouth",
+            "isCapital": true,
+            "country": {
+                "name": "Montserrat"
+            },
+            "location": {
+                "latitude": 16.70555,
+                "longitude": -62.21292
+            }
+            },
+            {
+            "name": "Valletta",
+            "isCapital": true,
+            "country": {
+                "name": "Malta"
+            },
+            "location": {
+                "latitude": 35.89972,
+                "longitude": 14.51472
+            }
+            },
+            {
+            "name": "Port Louis",
+            "isCapital": true,
+            "country": {
+                "name": "Mauritius"
+            },
+            "location": {
+                "latitude": -20.16194,
+                "longitude": 57.49889
+            }
+            },
+            {
+            "name": "Lilongwe",
+            "isCapital": true,
+            "country": {
+                "name": "Malawi"
+            },
+            "location": {
+                "latitude": -13.96692,
+                "longitude": 33.78725
+            }
+            },
+            {
+            "name": "Mexico City",
+            "isCapital": true,
+            "country": {
+                "name": "Mexico"
+            },
+            "location": {
+                "latitude": 19.42847,
+                "longitude": -99.12766
+            }
+            },
+            {
+            "name": "Kuala Lumpur",
+            "isCapital": true,
+            "country": {
+                "name": "Malaysia"
+            },
+            "location": {
+                "latitude": 3.1412,
+                "longitude": 101.68653
+            }
+            },
+            {
+            "name": "Maputo",
+            "isCapital": true,
+            "country": {
+                "name": "Mozambique"
+            },
+            "location": {
+                "latitude": -25.96553,
+                "longitude": 32.58322
+            }
+            },
+            {
+            "name": "Windhoek",
+            "isCapital": true,
+            "country": {
+                "name": "Namibia"
+            },
+            "location": {
+                "latitude": -22.55941,
+                "longitude": 17.08323
+            }
+            },
+            {
+            "name": "Nouméa",
+            "isCapital": true,
+            "country": {
+                "name": "New Caledonia"
+            },
+            "location": {
+                "latitude": -22.27407,
+                "longitude": 166.44884
+            }
+            },
+            {
+            "name": "Niamey",
+            "isCapital": true,
+            "country": {
+                "name": "Niger"
+            },
+            "location": {
+                "latitude": 13.51366,
+                "longitude": 2.1098
+            }
+            },
+            {
+            "name": "Kingston",
+            "isCapital": true,
+            "country": {
+                "name": "Norfolk Island"
+            },
+            "location": {
+                "latitude": -29.05459,
+                "longitude": 167.96628
+            }
+            },
+            {
+            "name": "Abuja",
+            "isCapital": true,
+            "country": {
+                "name": "Nigeria"
+            },
+            "location": {
+                "latitude": 9.05785,
+                "longitude": 7.49508
+            }
+            },
+            {
+            "name": "Managua",
+            "isCapital": true,
+            "country": {
+                "name": "Nicaragua"
+            },
+            "location": {
+                "latitude": 12.13282,
+                "longitude": -86.2504
+            }
+            },
+            {
+            "name": "Amsterdam",
+            "isCapital": true,
+            "country": {
+                "name": "Netherlands"
+            },
+            "location": {
+                "latitude": 52.37403,
+                "longitude": 4.88969
+            }
+            },
+            {
+            "name": "Oslo",
+            "isCapital": true,
+            "country": {
+                "name": "Norway"
+            },
+            "location": {
+                "latitude": 59.91273,
+                "longitude": 10.74609
+            }
+            },
+            {
+            "name": "Kathmandu",
+            "isCapital": true,
+            "country": {
+                "name": "Nepal"
+            },
+            "location": {
+                "latitude": 27.70169,
+                "longitude": 85.3206
+            }
+            },
+            {
+            "name": "Yaren",
+            "isCapital": true,
+            "country": {
+                "name": "Nauru"
+            },
+            "location": {
+                "latitude": -0.55085,
+                "longitude": 166.9252
+            }
+            },
+            {
+            "name": "Alofi",
+            "isCapital": true,
+            "country": {
+                "name": "Niue"
+            },
+            "location": {
+                "latitude": -19.05451,
+                "longitude": -169.91768
+            }
+            },
+            {
+            "name": "Wellington",
+            "isCapital": true,
+            "country": {
+                "name": "New Zealand"
+            },
+            "location": {
+                "latitude": -41.28664,
+                "longitude": 174.77557
+            }
+            },
+            {
+            "name": "Muscat",
+            "isCapital": true,
+            "country": {
+                "name": "Oman"
+            },
+            "location": {
+                "latitude": 23.58413,
+                "longitude": 58.40778
+            }
+            },
+            {
+            "name": "Lima",
+            "isCapital": true,
+            "country": {
+                "name": "Peru"
+            },
+            "location": {
+                "latitude": -12.04318,
+                "longitude": -77.02824
+            }
+            },
+            {
+            "name": "Port Moresby",
+            "isCapital": true,
+            "country": {
+                "name": "Papua New Guinea"
+            },
+            "location": {
+                "latitude": -9.44314,
+                "longitude": 147.17972
+            }
+            },
+            {
+            "name": "Manila",
+            "isCapital": true,
+            "country": {
+                "name": "Philippines"
+            },
+            "location": {
+                "latitude": 14.6042,
+                "longitude": 120.9822
+            }
+            },
+            {
+            "name": "Islamabad",
+            "isCapital": true,
+            "country": {
+                "name": "Pakistan"
+            },
+            "location": {
+                "latitude": 33.72148,
+                "longitude": 73.04329
+            }
+            },
+            {
+            "name": "Warsaw",
+            "isCapital": true,
+            "country": {
+                "name": "Poland"
+            },
+            "location": {
+                "latitude": 52.22977,
+                "longitude": 21.01178
+            }
+            },
+            {
+            "name": "Saint-Pierre",
+            "isCapital": true,
+            "country": {
+                "name": "Saint Pierre and Miquelon"
+            },
+            "location": {
+                "latitude": 46.77914,
+                "longitude": -56.1773
+            }
+            },
+            {
+            "name": "Adamstown",
+            "isCapital": true,
+            "country": {
+                "name": "Pitcairn Islands"
+            },
+            "location": {
+                "latitude": -25.06597,
+                "longitude": -130.10147
+            }
+            },
+            {
+            "name": "San Juan",
+            "isCapital": true,
+            "country": {
+                "name": "Puerto Rico"
+            },
+            "location": {
+                "latitude": 18.46633,
+                "longitude": -66.10572
+            }
+            },
+            {
+            "name": "Ramallah",
+            "isCapital": true,
+            "country": {
+                "name": "Palestine"
+            },
+            "location": {
+                "latitude": 31.89964,
+                "longitude": 35.20422
+            }
+            },
+            {
+            "name": "Lisbon",
+            "isCapital": true,
+            "country": {
+                "name": "Portugal"
+            },
+            "location": {
+                "latitude": 38.71667,
+                "longitude": -9.13333
+            }
+            },
+            {
+            "name": "Asunción",
+            "isCapital": true,
+            "country": {
+                "name": "Paraguay"
+            },
+            "location": {
+                "latitude": -25.30066,
+                "longitude": -57.63591
+            }
+            },
+            {
+            "name": "Doha",
+            "isCapital": true,
+            "country": {
+                "name": "Qatar"
+            },
+            "location": {
+                "latitude": 25.28545,
+                "longitude": 51.53096
+            }
+            },
+            {
+            "name": "Saint-Denis",
+            "isCapital": true,
+            "country": {
+                "name": "Réunion"
+            },
+            "location": {
+                "latitude": -20.88231,
+                "longitude": 55.4504
+            }
+            },
+            {
+            "name": "Bucharest",
+            "isCapital": true,
+            "country": {
+                "name": "Romania"
+            },
+            "location": {
+                "latitude": 44.43225,
+                "longitude": 26.10626
+            }
+            },
+            {
+            "name": "Belgrade",
+            "isCapital": true,
+            "country": {
+                "name": "Serbia"
+            },
+            "location": {
+                "latitude": 44.80401,
+                "longitude": 20.46513
+            }
+            },
+            {
+            "name": "Moscow",
+            "isCapital": true,
+            "country": {
+                "name": "Russia"
+            },
+            "location": {
+                "latitude": 55.75222,
+                "longitude": 37.61556
+            }
+            },
+            {
+            "name": "Kigali",
+            "isCapital": true,
+            "country": {
+                "name": "Rwanda"
+            },
+            "location": {
+                "latitude": -1.94995,
+                "longitude": 30.05885
+            }
+            },
+            {
+            "name": "Riyadh",
+            "isCapital": true,
+            "country": {
+                "name": "Saudi Arabia"
+            },
+            "location": {
+                "latitude": 24.68773,
+                "longitude": 46.72185
+            }
+            },
+            {
+            "name": "Honiara",
+            "isCapital": true,
+            "country": {
+                "name": "Solomon Islands"
+            },
+            "location": {
+                "latitude": -9.43333,
+                "longitude": 159.95
+            }
+            },
+            {
+            "name": "Victoria",
+            "isCapital": true,
+            "country": {
+                "name": "Seychelles"
+            },
+            "location": {
+                "latitude": -4.62001,
+                "longitude": 55.45501
+            }
+            },
+            {
+            "name": "Khartoum",
+            "isCapital": true,
+            "country": {
+                "name": "Sudan"
+            },
+            "location": {
+                "latitude": 15.55177,
+                "longitude": 32.53241
+            }
+            },
+            {
+            "name": "Stockholm",
+            "isCapital": true,
+            "country": {
+                "name": "Sweden"
+            },
+            "location": {
+                "latitude": 59.33258,
+                "longitude": 18.0649
+            }
+            },
+            {
+            "name": "Singapore",
+            "isCapital": true,
+            "country": {
+                "name": "Singapore"
+            },
+            "location": {
+                "latitude": 1.28967,
+                "longitude": 103.85007
+            }
+            },
+            {
+            "name": "Jamestown",
+            "isCapital": true,
+            "country": {
+                "name": "Saint Helena"
+            },
+            "location": {
+                "latitude": -15.93872,
+                "longitude": -5.71675
+            }
+            },
+            {
+            "name": "Ljubljana",
+            "isCapital": true,
+            "country": {
+                "name": "Slovenia"
+            },
+            "location": {
+                "latitude": 46.05108,
+                "longitude": 14.50513
+            }
+            },
+            {
+            "name": "Longyearbyen",
+            "isCapital": true,
+            "country": {
+                "name": "Svalbard and Jan Mayen"
+            },
+            "location": {
+                "latitude": 78.22334,
+                "longitude": 15.64689
+            }
+            },
+            {
+            "name": "Bratislava",
+            "isCapital": true,
+            "country": {
+                "name": "Slovakia"
+            },
+            "location": {
+                "latitude": 48.14816,
+                "longitude": 17.10674
+            }
+            },
+            {
+            "name": "Freetown",
+            "isCapital": true,
+            "country": {
+                "name": "Sierra Leone"
+            },
+            "location": {
+                "latitude": 8.43194,
+                "longitude": -13.28972
+            }
+            },
+            {
+            "name": "Freetown",
+            "isCapital": true,
+            "country": {
+                "name": "Sierra Leone"
+            },
+            "location": {
+                "latitude": 8.48714,
+                "longitude": -13.2356
+            }
+            },
+            {
+            "name": "Dakar",
+            "isCapital": true,
+            "country": {
+                "name": "Senegal"
+            },
+            "location": {
+                "latitude": 14.6937,
+                "longitude": -17.44406
+            }
+            },
+            {
+            "name": "Mogadishu",
+            "isCapital": true,
+            "country": {
+                "name": "Somalia"
+            },
+            "location": {
+                "latitude": 2.03711,
+                "longitude": 45.34375
+            }
+            },
+            {
+            "name": "Paramaribo",
+            "isCapital": true,
+            "country": {
+                "name": "Suriname"
+            },
+            "location": {
+                "latitude": 5.86638,
+                "longitude": -55.16682
+            }
+            },
+            {
+            "name": "Juba",
+            "isCapital": true,
+            "country": {
+                "name": "South Sudan"
+            },
+            "location": {
+                "latitude": 4.85165,
+                "longitude": 31.58247
+            }
+            },
+            {
+            "name": "São Tomé",
+            "isCapital": true,
+            "country": {
+                "name": "São Tomé and Príncipe"
+            },
+            "location": {
+                "latitude": 0.33654,
+                "longitude": 6.72732
+            }
+            },
+            {
+            "name": "San Salvador",
+            "isCapital": true,
+            "country": {
+                "name": "El Salvador"
+            },
+            "location": {
+                "latitude": 13.68935,
+                "longitude": -89.18718
+            }
+            },
+            {
+            "name": "Philipsburg",
+            "isCapital": true,
+            "country": {
+                "name": "Sint Maarten"
+            },
+            "location": {
+                "latitude": 18.026,
+                "longitude": -63.04582
+            }
+            },
+            {
+            "name": "Damascus",
+            "isCapital": true,
+            "country": {
+                "name": "Syria"
+            },
+            "location": {
+                "latitude": 33.5102,
+                "longitude": 36.29128
+            }
+            },
+            {
+            "name": "Lobamba",
+            "isCapital": true,
+            "country": {
+                "name": "Swaziland"
+            },
+            "location": {
+                "latitude": -26.46667,
+                "longitude": 31.2
+            }
+            },
+            {
+            "name": "Cockburn Town",
+            "isCapital": true,
+            "country": {
+                "name": "Turks and Caicos Islands"
+            },
+            "location": {
+                "latitude": 21.46122,
+                "longitude": -71.14188
+            }
+            },
+            {
+            "name": "N'Djamena",
+            "isCapital": true,
+            "country": {
+                "name": "Chad"
+            },
+            "location": {
+                "latitude": 12.10672,
+                "longitude": 15.0444
+            }
+            },
+            {
+            "name": "Port-aux-Français",
+            "isCapital": true,
+            "country": {
+                "name": "French Southern Territories"
+            },
+            "location": {
+                "latitude": -49.35,
+                "longitude": 70.21667
+            }
+            },
+            {
+            "name": "Lomé",
+            "isCapital": true,
+            "country": {
+                "name": "Togo"
+            },
+            "location": {
+                "latitude": 6.12874,
+                "longitude": 1.22154
+            }
+            },
+            {
+            "name": "Bangkok",
+            "isCapital": true,
+            "country": {
+                "name": "Thailand"
+            },
+            "location": {
+                "latitude": 13.75398,
+                "longitude": 100.50144
+            }
+            },
+            {
+            "name": "Dushanbe",
+            "isCapital": true,
+            "country": {
+                "name": "Tajikistan"
+            },
+            "location": {
+                "latitude": 38.53575,
+                "longitude": 68.77905
+            }
+            },
+            {
+            "name": "Dili",
+            "isCapital": true,
+            "country": {
+                "name": "East Timor"
+            },
+            "location": {
+                "latitude": -8.55861,
+                "longitude": 125.57361
+            }
+            },
+            {
+            "name": "Ashgabat",
+            "isCapital": true,
+            "country": {
+                "name": "Turkmenistan"
+            },
+            "location": {
+                "latitude": 37.95,
+                "longitude": 58.38333
+            }
+            },
+            {
+            "name": "Tunis",
+            "isCapital": true,
+            "country": {
+                "name": "Tunisia"
+            },
+            "location": {
+                "latitude": 36.81897,
+                "longitude": 10.16579
+            }
+            },
+            {
+            "name": "Ankara",
+            "isCapital": true,
+            "country": {
+                "name": "Turkey"
+            },
+            "location": {
+                "latitude": 39.91987,
+                "longitude": 32.85427
+            }
+            },
+            {
+            "name": "Port of Spain",
+            "isCapital": true,
+            "country": {
+                "name": "Trinidad and Tobago"
+            },
+            "location": {
+                "latitude": 10.66668,
+                "longitude": -61.51889
+            }
+            },
+            {
+            "name": "Funafuti",
+            "isCapital": true,
+            "country": {
+                "name": "Tuvalu"
+            },
+            "location": {
+                "latitude": -8.52425,
+                "longitude": 179.19417
+            }
+            },
+            {
+            "name": "Taipei",
+            "isCapital": true,
+            "country": {
+                "name": "Taiwan"
+            },
+            "location": {
+                "latitude": 25.04776,
+                "longitude": 121.53185
+            }
+            },
+            {
+            "name": "Dodoma",
+            "isCapital": true,
+            "country": {
+                "name": "Tanzania"
+            },
+            "location": {
+                "latitude": -6.17221,
+                "longitude": 35.73947
+            }
+            },
+            {
+            "name": "Kyiv",
+            "isCapital": true,
+            "country": {
+                "name": "Ukraine"
+            },
+            "location": {
+                "latitude": 50.45466,
+                "longitude": 30.5238
+            }
+            },
+            {
+            "name": "Kampala",
+            "isCapital": true,
+            "country": {
+                "name": "Uganda"
+            },
+            "location": {
+                "latitude": 0.31628,
+                "longitude": 32.58219
+            }
+            },
+            {
+            "name": "Montevideo",
+            "isCapital": true,
+            "country": {
+                "name": "Uruguay"
+            },
+            "location": {
+                "latitude": -34.90328,
+                "longitude": -56.18816
+            }
+            },
+            {
+            "name": "Tashkent",
+            "isCapital": true,
+            "country": {
+                "name": "Uzbekistan"
+            },
+            "location": {
+                "latitude": 41.26465,
+                "longitude": 69.21627
+            }
+            },
+            {
+            "name": "Vatican City",
+            "isCapital": true,
+            "country": {
+                "name": "Vatican City"
+            },
+            "location": {
+                "latitude": 41.90268,
+                "longitude": 12.45414
+            }
+            },
+            {
+            "name": "Kingstown",
+            "isCapital": true,
+            "country": {
+                "name": "Saint Vincent and the Grenadines"
+            },
+            "location": {
+                "latitude": 13.15527,
+                "longitude": -61.22742
+            }
+            },
+            {
+            "name": "Caracas",
+            "isCapital": true,
+            "country": {
+                "name": "Venezuela"
+            },
+            "location": {
+                "latitude": 10.48801,
+                "longitude": -66.87919
+            }
+            },
+            {
+            "name": "Road Town",
+            "isCapital": true,
+            "country": {
+                "name": "British Virgin Islands"
+            },
+            "location": {
+                "latitude": 18.42693,
+                "longitude": -64.62079
+            }
+            },
+            {
+            "name": "Charlotte Amalie",
+            "isCapital": true,
+            "country": {
+                "name": "U.S. Virgin Islands"
+            },
+            "location": {
+                "latitude": 18.3419,
+                "longitude": -64.9307
+            }
+            },
+            {
+            "name": "Hanoi",
+            "isCapital": true,
+            "country": {
+                "name": "Vietnam"
+            },
+            "location": {
+                "latitude": 21.0245,
+                "longitude": 105.84117
+            }
+            },
+            {
+            "name": "Mata-Utu",
+            "isCapital": true,
+            "country": {
+                "name": "Wallis and Futuna"
+            },
+            "location": {
+                "latitude": -13.28163,
+                "longitude": -176.17453
+            }
+            },
+            {
+            "name": "Apia",
+            "isCapital": true,
+            "country": {
+                "name": "Samoa"
+            },
+            "location": {
+                "latitude": -13.83333,
+                "longitude": -171.76666
+            }
+            },
+            {
+            "name": "Pristina",
+            "isCapital": true,
+            "country": {
+                "name": "Kosovo"
+            },
+            "location": {
+                "latitude": 42.67272,
+                "longitude": 21.16688
+            }
+            },
+            {
+            "name": "Mamoudzou",
+            "isCapital": true,
+            "country": {
+                "name": "Mayotte"
+            },
+            "location": {
+                "latitude": -12.78234,
+                "longitude": 45.22878
+            }
+            },
+            {
+            "name": "Pretoria",
+            "isCapital": true,
+            "country": {
+                "name": "South Africa"
+            },
+            "location": {
+                "latitude": -25.74486,
+                "longitude": 28.18783
+            }
+            },
+            {
+            "name": "Lusaka",
+            "isCapital": true,
+            "country": {
+                "name": "Zambia"
+            },
+            "location": {
+                "latitude": -15.40669,
+                "longitude": 28.28713
+            }
+            },
+            {
+            "name": "Harare",
+            "isCapital": true,
+            "country": {
+                "name": "Zimbabwe"
+            },
+            "location": {
+                "latitude": -17.82772,
+                "longitude": 31.05337
+            }
+            },
+            {
+                "name": "Washington",
+                "isCapital": true,
+                "country": {
+                    "name": "US"
+                },
+                "location": {
+                    "latitude": 38.892060,
+                    "longitude": -77.019910
+                }
+                }
+        ]
+    }
+}
