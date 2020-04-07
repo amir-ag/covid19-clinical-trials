@@ -27,7 +27,8 @@ const navigationControlStyle = {
 function App() {
 
   const mapRef = useRef();
-  const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN;
+  //const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN;
+  const MAPBOX_TOKEN = 'pk.eyJ1IjoiaG1jYyIsImEiOiJjazhuMjRqZmYwNHltM2ZsdmozMXcxYmVkIn0.N_1CqpQxfoju6PijpkXBKA'
 
   const [countriesInfo, setCountriesInfo] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState(null);
