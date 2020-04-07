@@ -1,5 +1,25 @@
 version: '3'
+
 services:
+  postgres:
+    image: postgres:12.1
+    env_file:
+      - ./envs/prod.env
+    volumes:
+      - postgres:/var/lib/postgresql/data
+
+  backend:
+    image: registry.gitlab.propulsion-home.ch/covid-dashboard/dashboard:latest
+    env_file:
+      - ./envs/prod.env
+    command: "sh ../scripts/run.sh"  # notice the different script and env files for development and production
+    depends_on:
+      - postgres
+    volumes:
+      - media-files:/media-files
+      - static-files:/static-files
+      - frontend:/frontend/build
+
   nginx:
     image: nginx:1.17.6
     restart: always
@@ -8,16 +28,14 @@ services:
       - "443:443"
     volumes:
       - ./nginx:/etc/nginx/conf.d
+      - static-files:/static-files
+      - media-files:/media-files
       - /etc/letsencrypt:/etc/letsencrypt
       - frontend:/frontend
 
-  frontend:
-    image: registry.gitlab.propulsion-home.ch/covid-dashboard/dashboard:latest
-    command: "sh /scripts/run.sh"
-    volumes:
-      - frontend:/frontend/build
-      - ./scripts:/scripts
-
 
 volumes:
+  postgres:
+  static-files:
+  media-files:
   frontend:
