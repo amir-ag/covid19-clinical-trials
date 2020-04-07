@@ -5,8 +5,5 @@ from import_export.admin import ImportExportModelAdmin
 from .models import Study
 
 @admin.register(Study)
-class PatientAdmin(ImportExportModelAdmin):
+class StudyAdmin(ImportExportModelAdmin):
     pass
-
-from .models.registration import Registration
-admin.site.register(Registration)
