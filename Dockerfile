@@ -19,6 +19,7 @@ ENV PATH /opt/conda/envs/backend/bin:$PATH
 ENV PYTHONDONTWRITEBYTECODE 1
 RUN echo "source activate backend" >~/.bashrc
 
+#RUN mkdir scripts
 COPY ./scripts /scripts
 RUN chmod +x ./scripts*
 
