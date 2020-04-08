@@ -16,7 +16,6 @@ class Study(models.Model):
     LocationState = models.TextField(verbose_name="state")
     LocationZip = models.TextField(verbose_name="zip-code")
     LocationCountry = models.TextField(verbose_name="country")
-    Visit = models.URLField(verbose_name="link", max_length=100, blank=True)
     Latitude = models.FloatField(verbose_name="latitude", blank=True, null=True)
     Longitude = models.FloatField(verbose_name="longitude", blank=True, null=True)
 
