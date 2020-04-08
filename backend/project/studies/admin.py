@@ -5,10 +5,4 @@ from .models import Study
 
 @admin.register(Study)
 class StudyAdmin(ImportExportModelAdmin):
-
-    @staticmethod
-    def Link(self, obj):
-        if obj.NCTId:
-            return "<a href='%s'>Link</a>" % "https://clinicaltrials.gov/ct2/show/" + obj.NCTId
-        else:
-            return ''
+    pass
