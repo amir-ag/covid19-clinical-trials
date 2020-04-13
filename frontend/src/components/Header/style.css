@@ -1,0 +1,63 @@
+:root {
+  --header-main-padding: 30px;
+  --header-main-height: 70px;
+  --header-main-background-color: #0a120e;
+}
+
+.header-main {
+  position: fixed;
+  z-index: 100;
+  box-sizing: border-box;
+  border-bottom: 1px solid grey;
+  width: 100vw;
+  /* width: calc(100vw - ( 2 * var(--header-main-padding))); */
+  height: var(--header-main-height);
+  margin: 0;
+  padding: 0 var(--header-main-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-main-background-color);
+  color: White;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  -moz-opacity: 0.80;
+  -khtml-opacity: 0.80;
+  opacity: 0.80;
+}
+
+.header-company {
+  display: flex;
+  align-items: center;
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+.header-company-logo {
+  width: 30px;
+  height: 30px;
+  animation: spin 5s linear infinite;
+}
+
+.header-company-name {
+  margin: 0;
+  margin-left: 10px;
+  font-size: 20px;
+
+}
+
+.header-about {
+  font-size: 20px;
+}
+
+.header-link {
+  color: #1f2f61;
+}
+
+.header-link:hover {
+  color: #1f2f61;
+  text-decoration: none;
+}

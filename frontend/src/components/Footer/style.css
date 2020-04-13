@@ -1,0 +1,28 @@
+:root {
+  --footer-main-padding: 30px;
+  --footer-main-height: 70px;
+  --footer-main-background-color: #0a120e;
+}
+
+.footer-main {
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  box-sizing: border-box;
+  border-top: 1px solid grey;
+  width: 100vw;
+  /* width: calc(100vw - ( 2 * var(--footer-main-padding))); */
+  height: var(--footer-main-height);
+  margin: 0;
+  padding: 0 var(--footer-main-padding);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--footer-main-background-color);
+  color: White;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  -moz-opacity: 0.80;
+  -khtml-opacity: 0.80;
+  opacity: 0.80;
+}
