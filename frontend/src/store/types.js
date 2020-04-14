@@ -1,0 +1,3 @@
+export const BUTTON_THEME_STATE = 'BUTTON_THEME_STATE';
+export const SIDEBAR_DATA = 'SIDEBAR_DATA';
+

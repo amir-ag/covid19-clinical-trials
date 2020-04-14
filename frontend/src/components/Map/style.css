@@ -1,0 +1,20 @@
+.mapboxgl-ctrl-top-right {
+    width: 250px;
+    top: 70px;
+}
+
+.geolocate-navigation-controls {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    margin: 10px 10px;
+    transition: all 500ms linear;
+}
+
+.geolocate-controls {
+    margin-bottom: 10px;
+}
+
+.geolocate-navigation-controls.active {
+  left: 400px;
+}  
