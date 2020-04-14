@@ -13,3 +13,4 @@ dependencies:
       - pillow==7.0.0
       - coreapi==2.3.3
       - django-import-export==2.0.2
+      - geopy==1.21.0
