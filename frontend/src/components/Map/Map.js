@@ -118,6 +118,7 @@ function Map(props) {
               positionOptions={{enableHighAccuracy: true}}
               trackUserLocation={true}
               showUserLocation={true}
+              fitBoundsOptions={{ bounds: [viewPort.latitude, viewPort.longitude] , maxZoom: 4, fitboundUpdate: true }}
             />
           </div>
           {/* rendering the navigation control */}
