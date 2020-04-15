@@ -1,3 +1,4 @@
+from django.contrib.postgres.fields import ArrayField
 from django.db import models
 
 
@@ -6,16 +7,16 @@ class Study(models.Model):
     BriefTitle = models.TextField(verbose_name="title")
     BriefSummary = models.TextField(verbose_name="summary")
     InterventionDescription = models.TextField(verbose_name="intervention")
-    InterventionName = models.TextField(verbose_name="intervention-drug")
+    InterventionName = ArrayField(models.TextField(verbose_name="intervention-drug"))
     OverallStatus = models.TextField(verbose_name="status")
-    CentralContactName = models.TextField(verbose_name="contact-name")
-    CentralContactEMail = models.TextField(verbose_name="contact-email")
-    CentralContactPhone = models.TextField(verbose_name="contact-phone")
-    LocationFacility = models.TextField(verbose_name="facility")
-    LocationCity = models.TextField(verbose_name="city")
-    LocationState = models.TextField(verbose_name="state")
-    LocationZip = models.TextField(verbose_name="zip-code")
-    LocationCountry = models.TextField(verbose_name="country")
+    CentralContactName = ArrayField(models.TextField(verbose_name="contact-name"))
+    CentralContactEMail = ArrayField(models.TextField(verbose_name="contact-email"))
+    CentralContactPhone = ArrayField(models.TextField(verbose_name="contact-phone"))
+    LocationFacility = ArrayField(models.TextField(verbose_name="facility"))
+    LocationCity = ArrayField(models.TextField(verbose_name="city"))
+    LocationState = ArrayField(models.TextField(verbose_name="state"))
+    LocationZip = ArrayField(models.TextField(verbose_name="zip-code"))
+    LocationCountry = ArrayField(models.TextField(verbose_name="country"))
     Latitude = models.FloatField(verbose_name="latitude", blank=True, null=True)
     Longitude = models.FloatField(verbose_name="longitude", blank=True, null=True)
 

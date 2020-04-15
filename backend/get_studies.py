@@ -4,7 +4,8 @@ import django
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings')
 django.setup()
-
+import schedule
+import time
 from project.studies.models import Study
 studies = Study.objects.values()
 
@@ -13,43 +14,37 @@ r = requests.get(url)
 results = r.json()
 
 
-count = 0
-for entry in results["StudyFieldsResponse"]["StudyFields"]:
-    try:
-        obj = Study.objects.get(NCTId=entry['NCTId'][0])
-    except Study.DoesNotExist:
-        print("does not exist - create new!")
-        count += 1
-        obj = Study(
-            NCTId=entry['NCTId'][0],
-            BriefTitle=entry['BriefTitle'][0],
-            BriefSummary=entry['BriefSummary'][0],
-            InterventionDescription=str(entry['InterventionDescription']),
-            InterventionName=str(entry['InterventionName']),
-            OverallStatus=str(entry['OverallStatus']),
-            CentralContactName=entry['CentralContactName'],
-            CentralContactEMail=entry['CentralContactEMail'],
-            CentralContactPhone=entry['CentralContactPhone'],
-            LocationFacility=entry['LocationFacility'],
-            LocationCity=entry['LocationCity'],
-            LocationState=entry['LocationState'],
-            LocationZip=entry['LocationZip'],
-            LocationCountry=entry['LocationCountry']
-        )
-        obj.save()
-print(count)
+def get_studies():
+    count = 0
+    for entry in results["StudyFieldsResponse"]["StudyFields"]:
+        try:
+            obj = Study.objects.get(NCTId=entry['NCTId'][0])
+        except Study.DoesNotExist:
+            print("does not exist - create new!")
+            count += 1
+            obj = Study(
+                NCTId=entry['NCTId'][0],
+                BriefTitle=entry['BriefTitle'][0],
+                BriefSummary=entry['BriefSummary'][0],
+                InterventionDescription=entry['InterventionDescription'],
+                InterventionName=entry['InterventionName'],
+                OverallStatus=entry['OverallStatus'][0],
+                CentralContactName=entry['CentralContactName'],
+                CentralContactEMail=entry['CentralContactEMail'],
+                CentralContactPhone=entry['CentralContactPhone'],
+                LocationFacility=entry['LocationFacility'],
+                LocationCity=entry['LocationCity'],
+                LocationState=entry['LocationState'],
+                LocationZip=entry['LocationZip'],
+                LocationCountry=entry['LocationCountry']
+            )
+            obj.save()
+    print(count)
 
 
 
+schedule.every().day.at("02:20").do(get_studies)
 
-
-
-#     if Study.objects.filter(NCTId=entry["NCTId"]).exists():
-#         print(entry["NCTId"], "exists!")
-#         count += 1
-# print(count)
-
-#     if entry["NCTId"][0] == study["NCTId"]:
-# for study in studies:
-# print(study["NCTId"], "found!")
-
+while True:
+    schedule.run_pending()
+    time.sleep(1)

@@ -14,3 +14,4 @@ dependencies:
       - coreapi==2.3.3
       - django-import-export==2.0.2
       - geopy==1.21.0
+      - schedule==0.6.0
