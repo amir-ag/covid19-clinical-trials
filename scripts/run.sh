@@ -11,5 +11,5 @@ python manage.py collectstatic --no-input
 gunicorn -w 4 -b 0.0.0.0:8000 project.wsgi:application
 # -w stands for workers
 # -b stands for bind
-python get_studies
-python get_coordinates
+python get_studies.py
+python get_coordinates.py
