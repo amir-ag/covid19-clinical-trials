@@ -4,8 +4,8 @@ import django
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings')
 django.setup()
-import schedule
-import time
+# import schedule
+# import time
 from project.studies.models import Study
 studies = Study.objects.values()
 
@@ -41,10 +41,11 @@ def get_studies():
             obj.save()
     print(count)
 
+if __name__ == '__main__':
+    get_studies()
 
-
-schedule.every().day.at("02:20").do(get_studies)
-
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+# schedule.every().day.at("02:20").do(get_studies)
+#
+# while True:
+#     schedule.run_pending()
+#     time.sleep(1)
