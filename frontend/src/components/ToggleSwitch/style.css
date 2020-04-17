@@ -1,5 +1,5 @@
 :root {
-    --button-switch-background-color: #1e4735;
+    --button-switch-background-color: #28446B; /* #1e4735 */
 }
 
 input[type=checkbox]{
@@ -13,7 +13,7 @@ label {
 	text-indent: -9999px;
 	width: 60px;
 	height: 30px;
-	background: grey;
+	background: #cde8c9;
 	display: block;
 	border-radius: 100px;
 	position: relative;
