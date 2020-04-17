@@ -12,6 +12,7 @@ import { faCrosshairs } from '@fortawesome/free-solid-svg-icons';
 import { connect } from 'react-redux';
 import  { sidebarDataAction } from '../../store/actions/sidebarDataAction';
 import * as capitalsGeoReferences from '../../assets/data/capitalsGeoReferences.json';
+import { mapDataAction } from '../../store/actions/mapDataAction';
 import './index.css';
 
 function Map(props) {
@@ -24,25 +25,26 @@ function Map(props) {
 
   useEffect(() => { 
       const fetchData = async () => {
-      const response = await fetch("https://pomber.github.io/covid19/timeseries.json");
-      const data = await response.json();
-      const countriesInfo = countriesUpdatedData(data);
-      setCountriesInfo(countriesInfo);
+      // const response = await fetch("https://pomber.github.io/covid19/timeseries.json");
+      // const data = await response.json();
+      // const countriesInfo = countriesUpdatedData(data);
+      // setCountriesInfo(countriesInfo);
+      await props.dispatch(mapDataAction());
     }
     fetchData();
   }, []);
 
-  const countriesUpdatedData = (virusInfoByCountry) => {
-    const countries = [];
-    for (const [country, mostRecentData] of Object.entries(virusInfoByCountry)) {
-      capitalsGeoReferences.cities.results.forEach((city) => {
-        if (city.country.name === country) {
-          countries.push({ country: { name: country, ...mostRecentData[mostRecentData.length - 1] }, location: city.location })
-        }
-      });
-    }
-    return countries;
-  }
+  // const countriesUpdatedData = (virusInfoByCountry) => {
+  //   const countries = [];
+  //   for (const [country, mostRecentData] of Object.entries(virusInfoByCountry)) {
+  //     capitalsGeoReferences.cities.results.forEach((city) => {
+  //       if (city.country.name === country) {
+  //         countries.push({ country: { name: country, ...mostRecentData[mostRecentData.length - 1] }, location: city.location })
+  //       }
+  //     });
+  //   }
+  //   return countries;
+  // }
 
   const userLocationHandler = (event) => {
     event.preventDefault();
@@ -131,7 +133,7 @@ function Map(props) {
     }
 
 
-    { userLocation && !showUserLocation && (
+    { props.data && !showUserLocation && (
       <Marker
         position={{
           lat: userLocation.coords.latitude,
@@ -145,7 +147,7 @@ function Map(props) {
     )}
 
 
-    { selectedCountry && (
+    {/* { selectedCountry && (
       <InfoWindow 
         position={{
           lat: selectedCountry.location.latitude,
@@ -161,15 +163,17 @@ function Map(props) {
           <p>Date: {selectedCountry.country.date}</p>
         </>
       </InfoWindow>
-    )}
+    )} */}
 
     </GoogleMap>
   );
 }
 // export default Map;
-const mapStateToProps = ({ buttonThemeStateReducer }) => {
+const mapStateToProps = ({ buttonThemeStateReducer, mapDataReducer: data }) => {
+  console.log("data: ", data)
   return {
-    checked: buttonThemeStateReducer.checked
+    checked: buttonThemeStateReducer.checked,
+    data: data
   };
 };
 
