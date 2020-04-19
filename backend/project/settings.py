@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'import_export',
     'geopy',
+    'schedule',
 
     'project.users',
     'project.studies',
