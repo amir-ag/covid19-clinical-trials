@@ -1,8 +1,8 @@
 import os
 import django
 from geopy.geocoders import GoogleV3
-# import schedule
-# import time
+import schedule
+import time
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings')
 django.setup()
@@ -16,45 +16,75 @@ def get_coordinates():
     for study in studies:
         if not study["Latitude"]:
             if study["LocationFacility"]:
-                search_term = f'{study["LocationFacility"][0]} {study["LocationCountry"][0]}'
+                search_term = f'{study["LocationFacility"]} {study["LocationCity"]} {study["LocationCountry"]}'
                 print(search_term)
                 location = geolocator.geocode(f'{search_term}')
                 if location:
-                    entry = Study.objects.get(NCTId=study['NCTId'])
+                    entry = Study.objects.get(NCTId=study['NCTId'], LocationFacility=study['LocationFacility'], LocationZip=study['LocationZip'])
+                    entry.Latitude = location.latitude
+                    entry.Longitude = location.longitude
+                    entry.save()
+                    print("location data added and saved")
+                elif study["LocationZip"] and study["LocationCity"]:
+                    search_term = f'{study["LocationZip"]} {study["LocationCity"]}'
+                    print(search_term)
+                    location = geolocator.geocode(f'{search_term}')
+                    if location:
+                        entry = Study.objects.get(NCTId=study['NCTId'], LocationZip=study["LocationZip"],
+                                                  LocationCity=study["LocationCity"])
+                        entry.Latitude = location.latitude
+                        entry.Longitude = location.longitude
+                        entry.save()
+                        print("location data added and saved")
+                    else:
+                        search_term = f'{study["LeadSponsorName"]}'
+                        location = geolocator.geocode(f'{search_term}')
+                        if location:
+                            entry = Study.objects.get(NCTId=study['NCTId'], LocationZip=study["LocationZip"],
+                                                      LocationCity=study["LocationCity"])
+                            entry.Latitude = location.latitude
+                            entry.Longitude = location.longitude
+                            entry.save()
+                            print("location data added and saved")
+
+            elif study["LocationZip"] and study["LocationCity"]:
+                search_term = f'{study["LocationZip"]} {study["LocationCity"]}'
+                print(search_term)
+                location = geolocator.geocode(f'{search_term}')
+                if location:
+                    entry = Study.objects.get(NCTId=study['NCTId'], LocationZip=study["LocationZip"], LocationCity=study["LocationCity"])
                     entry.Latitude = location.latitude
                     entry.Longitude = location.longitude
                     entry.save()
                     print("location data added and saved")
 
-            elif study["LocationZip"] and study["LocationCountry"]:
-                search_term = f'{study["LocationZip"][0]} {study["LocationCity"][0]}'
-                print(search_term)
+            elif study["LeadSponsorName"]:
+                search_term = f'{study["LeadSponsorName"]}'
                 location = geolocator.geocode(f'{search_term}')
                 if location:
-                    entry = Study.objects.get(NCTId=study['NCTId'])
+                    entry = Study.objects.get(NCTId=study['NCTId'], LeadSponsorName=study["LeadSponsorName"])
                     entry.Latitude = location.latitude
                     entry.Longitude = location.longitude
                     entry.save()
                     print("location data added and saved")
 
             elif study["LocationCountry"]:
-                search_term = f'{study["LocationZip"][0]} {study["LocationCity"][0]}'
+                search_term = f'{study["LocationCountry"]}'
                 print(search_term)
                 location = geolocator.geocode(f'{search_term}')
                 if location:
-                    entry = Study.objects.get(NCTId=study['NCTId'])
+                    entry = Study.objects.get(NCTId=study['NCTId'], LocationCountry=study["LocationCountry"])
                     entry.Latitude = location.latitude
                     entry.Longitude = location.longitude
                     entry.save()
                     print("location data added and saved")
 
+# if __name__ == '__main__':
+#     get_coordinates()
 
-if __name__ == '__main__':
-    get_coordinates()
 
+schedule.every().day.at("02:30").do(get_coordinates)
 
-# schedule.every().day.at("02:30").do(get_coordinates)
-#
-# while True:
-#     schedule.run_pending()
-#     time.sleep(1)
+while True:
+    schedule.run_pending()
+    time.sleep(1)
