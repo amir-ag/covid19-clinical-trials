@@ -1,8 +1,8 @@
 import os
 import django
 from geopy.geocoders import GoogleV3
-import schedule
-import time
+# import schedule
+# import time
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings')
 django.setup()
@@ -79,12 +79,12 @@ def get_coordinates():
                     entry.save()
                     print("location data added and saved")
 
-# if __name__ == '__main__':
-#     get_coordinates()
+if __name__ == '__main__':
+    get_coordinates()
 
 
-schedule.every().day.at("02:30").do(get_coordinates)
-
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+# schedule.every().day.at("02:30").do(get_coordinates)
+#
+# while True:
+#     schedule.run_pending()
+#     time.sleep(1)
