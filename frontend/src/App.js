@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import React from 'react';
 
-import Map from './components/Map/Map'
-import Header from './components/Header'
-import Sidebar from './components/Sidebar'
-import Footer from './components/Footer'
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
+import MapWrapper from './components/MapWrapper'
+
 
 import './App.css';
 
@@ -16,7 +17,7 @@ function App() {
         <div style={{display: "flex"}}>
           <Sidebar />
           <Switch>
-            <Route exact path='/' component={Map} />
+            <Route exact path='/' component={MapWrapper} />
           </Switch>
         </div>
         <Footer />
@@ -26,3 +27,4 @@ function App() {
 }
 
 export default App;
+

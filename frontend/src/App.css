@@ -1,7 +1,7 @@
 html[data-theme="light"] {
-  --header-main-background-color: #5fa5bf;
-  --footer-main-background-color: #5fa5bf;
-  --sidebar-background-color: #5fa5bf;
+  --header-main-background-color: #407196;
+  --footer-main-background-color: #407196;
+  --sidebar-background-color: #407196;
   --sidebar-left-border-right: 3px solid gray;
 }
 
