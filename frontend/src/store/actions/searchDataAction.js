@@ -1,4 +1,4 @@
-//import { baseUrl } from "../constants";
+import { baseUrl } from "../constants";
 import { SEARCH_DATA } from "../types";
 
 export const searchData = (data) => ({
