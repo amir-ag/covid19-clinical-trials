@@ -1,18 +1,19 @@
 import React, { useState,  useEffect } from 'react';
 import './style.css';
 
-export default function LogIn() {
+export default function LogIn(props) {
     const [email, setEmailName] = useState('');
     const [password, setPassword] = useState('');
 
     const nextButtonHandler = (event) => {
         event.preventDefault();
+        props.logInButtonHandler()
         //dispatch action
     }
 
     return (
         <>
-            <form className="form-login-container">
+            <form className={`form-login-container ${props.visibility ? '' : 'hidden'}`}>
                 <h1>Login</h1>
                 <div className="form-tab">
                     <p>Login Information:</p>

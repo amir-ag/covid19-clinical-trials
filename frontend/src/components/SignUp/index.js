@@ -1,8 +1,7 @@
 import React, { useState,  useEffect } from 'react';
 import './style.css';
 
-export default function SignUp() {
-    const[isOptionsVisible, setOptionsVisible] = useState(true);
+export default function SignUp(props) {
     const [email, setEmail] = useState('');
     const [code, setValidationCode] = useState('');
     const [username, setUsername] = useState('');
@@ -31,7 +30,8 @@ export default function SignUp() {
         else {
             formStepIndicator(0);
             setRegisterStep(0);
-            setOptionsVisible(false);
+            props.signUpButtonHandler();
+
             //dispatch
         }
 
@@ -65,7 +65,7 @@ export default function SignUp() {
     return (
         <>
             
-            <form className={`form-signup-container ${isOptionsVisible ? '' : 'hidden'}`} >
+            <form className={`form-signup-container ${props.visibility ? '' : 'hidden'}`} >
                 {
                     registerStep == 0 ?
                         <>

@@ -31,14 +31,32 @@
   align-items: center;
 }
 
+.header-company h1 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.header-company div {
+  display: flex;
+  align-items: flex-end;
+  height: 30px;
+  padding: 0px;
+  border-left: 3px solid white;
+  margin-left: 15px;
+}
+
+.header-company p {
+  margin-left: 5px;
+}
+
 @keyframes spin {
   from {transform:rotate(0deg);}
   to {transform:rotate(360deg);}
 }
 
 .header-company-logo {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   animation: spin 5s linear infinite;
 }
 

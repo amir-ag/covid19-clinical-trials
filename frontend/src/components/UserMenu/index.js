@@ -11,13 +11,25 @@ import userIconLogout from '../../assets/images/userIconLogout.svg';
 
 function UserMenu(props) {
     const[isOptionsVisible, setOptionsVisible] = useState(false);
-    const[showForm, setShowForm] = useState("none");
+    const[isSignUpVisible, setSignUpVisibility] = useState(false);
+    const[isLogInVisible, setLoginVisibility] = useState(false);
 
     const logOutHandler = (event) => {
         event.preventDefault();
         props.dispatch(logOutAction(null));
         setOptionsVisible(false);
-        setShowForm('none');
+    }
+
+    const signUpButtonHandler = () => {
+        setOptionsVisible(false);
+        if(!isSignUpVisible) setLoginVisibility(false);
+        setSignUpVisibility(!isSignUpVisible);
+    }
+
+    const logInButtonHandler = () => {
+        setOptionsVisible(false);
+        if(!isLogInVisible) setSignUpVisibility(false);
+        setLoginVisibility(!isLogInVisible);
     }
 
     return (
@@ -27,10 +39,10 @@ function UserMenu(props) {
                 <div className={`option-container ${isOptionsVisible ? '' : 'hidden'}`} >
                 { !props.authenticated && (  
                     <>  
-                        <button onClick={() => setShowForm("signUp")}>
+                        <button onClick={ signUpButtonHandler }>
                             Sign Up
                         </button>
-                        <button onClick={() => setShowForm("logIn")}>
+                        <button onClick={ logInButtonHandler }>
                             Login
                         </button>
                     </>
@@ -49,13 +61,13 @@ function UserMenu(props) {
             </div>
  
             {
-                showForm === 'signUp' && (
-                    <SignUp />
+                isSignUpVisible && (
+                    <SignUp visibility={isSignUpVisible} signUpButtonHandler={signUpButtonHandler} />
                 ) 
             }
             {
-                showForm === 'logIn' && (
-                    <LogIn />
+                isLogInVisible && (
+                    <LogIn visibility={isLogInVisible} logInButtonHandler={logInButtonHandler} />
                 ) 
             }
         </>

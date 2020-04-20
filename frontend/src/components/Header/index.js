@@ -14,8 +14,10 @@ class Header extends Component {
     return (
       <div className="header-main">
         <div className="header-company">
-        <img className="header-company-logo" src={companyLogo} alt="company logo"/>
-          <p className="header-company-name">Clinical Trials</p>
+          <h1>C<span><img className="header-company-logo" src={companyLogo} alt="company logo"/></span>VID-19</h1>
+          <div>
+            <p className="header-company-name">Clinical Trials</p>
+          </div>
         </div>
         <SearchBar />
         <div style={{display: "flex", alignItems: "center"}}> 

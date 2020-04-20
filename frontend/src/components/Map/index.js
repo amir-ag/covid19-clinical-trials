@@ -56,7 +56,7 @@ function Map(props) {
   }
 
   const hideClinicInfo = () => {
-    setSelectedClinic(null)
+    setSelectedClinic(null);
   }
 
   const customMapStyle = () => {
@@ -92,14 +92,14 @@ function Map(props) {
     
     <UserMenu />
 
-    /* rendering user position button */
+    {/* rendering user position button */}
     {
       <button className="btn-location" onClick={userLocationHandler}>
         <FontAwesomeIcon icon={faCrosshairs} style={ showUserLocation ? { width: "20px", height: "20px", color: "#666666" } : { width: "20px", height: "20px", color: "#399DD5" } }/>
       </button>
     }
 
-    /* rendering user position */  
+    {/* rendering user position */}  
     { userLocation && !showUserLocation && (
       <Marker
         position={{
@@ -113,8 +113,8 @@ function Map(props) {
       />
     )}
 
+    {/* rendering the clinics position */}
     {
-      /* rendering the clinics position */
       props.data.map((clinic, index) => {
         if(clinic.Latitude && clinic.Longitude){
           return (
@@ -122,7 +122,7 @@ function Map(props) {
               key={index} 
               position={{ lat: clinic.Latitude, lng: clinic.Longitude }}
               icon={{
-                url: `/coronavirus.svg`,
+                url: `/locationMarker.svg`,
                 scaledSize: new window.google.maps.Size(25, 25)
               }}
               onClick={toggleSideBar}
@@ -135,7 +135,7 @@ function Map(props) {
       })
     }
 
-    /* rendering the onMouseOver clinic info */
+    {/* rendering the onMouseOver clinic info */}
     { selectedClinic && (
       <InfoWindow 
         position={{
