@@ -8,8 +8,7 @@ class StudySerializer(serializers.ModelSerializer):
     class Meta:
         model = Study
         fields = '__all__'
-        exclude = ['password']
 
     @staticmethod
-    def get_visitStudy(self, study):
-        return f"https://clinicaltrials.gov/ct2/show/{self.study.NCTId}"
+    def get_visitStudy(self):
+        return f"https://clinicaltrials.gov/ct2/show/{self.NCTId}"
