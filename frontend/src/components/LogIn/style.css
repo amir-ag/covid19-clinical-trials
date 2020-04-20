@@ -1,0 +1,54 @@
+.form-login-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    z-index: 1;
+    top: 250px;
+    left: 550px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    padding: 40px;
+    width: 500px;
+    min-width: 300px;
+}
+
+.form-login-container h1 {
+    text-align: center;  
+}
+
+.form-login-container .form-tab {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-login-container .form-tab input {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid #aaaaaa;
+    margin-bottom: 10px;
+}
+
+.form-login-container input.invalid {
+    background-color: #ffdddd;
+}
+
+.form-login-container .btn-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-login-container .btn-container button {
+    background-color: #5586AB;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.form-login-container .btn-container button:hover {
+    opacity: 0.8;
+}
+

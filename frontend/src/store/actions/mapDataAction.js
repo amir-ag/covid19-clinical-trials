@@ -16,9 +16,8 @@ export const mapDataAction = () => async (dispatch, getState) => {
     method: 'GET'
   };
 
-  const response = await fetch(`${ baseUrl }/studies/`, config);
+  const response = await fetch(`/studies/`, config);
   const data = await response.json();
-  console.log("data ", data);
 
   dispatch(mapData(data));
 };

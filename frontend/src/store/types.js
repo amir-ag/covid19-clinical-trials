@@ -3,5 +3,6 @@ export const SIDEBAR_DATA = 'SIDEBAR_DATA';
 export const SEARCH_DATA = 'SEARCH_DATA';
 export const MAP_DATA = 'MAP_DATA';
 export const USER_LOGIN = "USER_LOGIN";
+export const USER_LOGOUT = "USER_LOGOUT";
 export const USER_REGISTRATION = "USER_REGISTRATION";
 

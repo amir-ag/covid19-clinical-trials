@@ -11,13 +11,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCrosshairs } from '@fortawesome/free-solid-svg-icons';
 import { connect } from 'react-redux';
 import  { sidebarDataAction } from '../../store/actions/sidebarDataAction';
-import * as capitalsGeoReferences from '../../assets/data/capitalsGeoReferences.json';
 import { mapDataAction } from '../../store/actions/mapDataAction';
 import './index.css';
+import UserMenu from "../UserMenu";
 
 function Map(props) {
-  const [countriesInfo, setCountriesInfo] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState(null);
+  //const [countriesInfo, setCountriesInfo] = useState([]);
+  const [selectedClinic, setSelectedClinic] = useState(null);
   const [userLocation, setUserLocation] = useState(null);
   const [showUserLocation, setShowUserLocation] = useState(true);
   const [mapCenter, setMapCenter] = useState({ lat: 15.7077507, lng: 10.1365919 })
@@ -25,26 +25,10 @@ function Map(props) {
 
   useEffect(() => { 
       const fetchData = async () => {
-      // const response = await fetch("https://pomber.github.io/covid19/timeseries.json");
-      // const data = await response.json();
-      // const countriesInfo = countriesUpdatedData(data);
-      // setCountriesInfo(countriesInfo);
-      await props.dispatch(mapDataAction());
+        await props.dispatch(mapDataAction());
     }
     fetchData();
   }, []);
-
-  // const countriesUpdatedData = (virusInfoByCountry) => {
-  //   const countries = [];
-  //   for (const [country, mostRecentData] of Object.entries(virusInfoByCountry)) {
-  //     capitalsGeoReferences.cities.results.forEach((city) => {
-  //       if (city.country.name === country) {
-  //         countries.push({ country: { name: country, ...mostRecentData[mostRecentData.length - 1] }, location: city.location })
-  //       }
-  //     });
-  //   }
-  //   return countries;
-  // }
 
   const userLocationHandler = (event) => {
     event.preventDefault();
@@ -66,13 +50,13 @@ function Map(props) {
     document.getElementsByClassName('sidebar-wrapper')[0].classList.toggle('active');
   }
 
-  const showCountryInfo = (country) => {
-    setSelectedCountry(country);
-    props.dispatch(sidebarDataAction(country));
+  const showClinicInfo = (clinic) => {
+    setSelectedClinic(clinic);
+    //props.dispatch(sidebarDataAction(clinic));
   }
 
-  const hideCountryInfo = () => {
-    setSelectedCountry(null)
+  const hideClinicInfo = () => {
+    setSelectedClinic(null)
   }
 
   const customMapStyle = () => {
@@ -98,42 +82,25 @@ function Map(props) {
     center={ mapCenter }
     options={{
       styles: customMapStyle(),
-      zoomControlOptions: { position: 8 },
+      zoomControlOptions: { position: 8, right: "10px"},
       streetViewControl:false,
       fullscreenControl:false,
       mapTypeControl: false,
-      minZoom: 2.7
+      minZoom: 2.7,
     }}
     >
     
+    <UserMenu />
+
+    /* rendering user position button */
     {
       <button className="btn-location" onClick={userLocationHandler}>
         <FontAwesomeIcon icon={faCrosshairs} style={ showUserLocation ? { width: "20px", height: "20px", color: "#666666" } : { width: "20px", height: "20px", color: "#399DD5" } }/>
       </button>
     }
 
-    {
-      /* rendering the coronavirus icons */
-      countriesInfo.map((country, index) => {
-        return (
-          <Marker 
-            key={index} 
-            position={{ lat: country.location.latitude, lng: country.location.longitude}}
-            icon={{
-              url: `/coronavirus.svg`,
-              scaledSize: new window.google.maps.Size(25, 25)
-            }}
-            onClick={toggleSideBar}
-            onMouseOut={hideCountryInfo}
-            onMouseOver={() => { showCountryInfo(country) }}
-          >
-          </Marker>
-        )
-      })
-    }
-
-
-    { props.data && !showUserLocation && (
+    /* rendering user position */  
+    { userLocation && !showUserLocation && (
       <Marker
         position={{
           lat: userLocation.coords.latitude,
@@ -146,31 +113,52 @@ function Map(props) {
       />
     )}
 
+    {
+      /* rendering the clinics position */
+      props.data.map((clinic, index) => {
+        if(clinic.Latitude && clinic.Longitude){
+          return (
+            <Marker 
+              key={index} 
+              position={{ lat: clinic.Latitude, lng: clinic.Longitude }}
+              icon={{
+                url: `/coronavirus.svg`,
+                scaledSize: new window.google.maps.Size(25, 25)
+              }}
+              onClick={toggleSideBar}
+              onMouseOut={hideClinicInfo}
+              onMouseOver={() => { showClinicInfo(clinic) }}
+            >
+            </Marker>
+          )
+        }
+      })
+    }
 
-    {/* { selectedCountry && (
+    /* rendering the onMouseOver clinic info */
+    { selectedClinic && (
       <InfoWindow 
         position={{
-          lat: selectedCountry.location.latitude,
-          lng: selectedCountry.location.longitude
+          lat: selectedClinic.Latitude,
+          lng: selectedClinic.Longitude
         }}
-        options={{pixelOffset: new window.google.maps.Size(0,-30)}}
+        options={{
+          pixelOffset: new window.google.maps.Size(0,-30),
+          maxWidth: '250'
+        }}
+        
       >
-        <>
-          <h3>{selectedCountry.country.name}</h3>
-          <p>Confirmed: {selectedCountry.country.confirmed}</p>
-          <p>Deaths: {selectedCountry.country.deaths}</p>
-          <p>Recovered: {selectedCountry.country.recovered}</p>
-          <p>Date: {selectedCountry.country.date}</p>
-        </>
+        <div style={{ textAlign: 'center' }}>
+          <h3>{selectedClinic.BriefTitle}</h3>
+        </div>
       </InfoWindow>
-    )} */}
+    )}
 
     </GoogleMap>
   );
 }
-// export default Map;
-const mapStateToProps = ({ buttonThemeStateReducer, mapDataReducer: data }) => {
-  console.log("data: ", data)
+
+const mapStateToProps = ({ buttonThemeStateReducer, mapDataReducer: { data } }) => {
   return {
     checked: buttonThemeStateReducer.checked,
     data: data
