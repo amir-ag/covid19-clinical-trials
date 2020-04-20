@@ -1,4 +1,4 @@
-//import { baseUrl } from "../constants";
+import { baseUrl } from "../constants";
 import { SEARCH_DATA } from "../types";
 
 export const searchData = (data) => ({
@@ -19,8 +19,10 @@ export const searchDataAction = (toSearch) => async (dispatch, getState) => {
   };
 
   let response = null;
-  if (toSearch === '') response = await fetch(`/studies/`, config);
-  else response = await fetch(`/studies/?search=${toSearch}`, config);
+  // if (toSearch === '') response = await fetch(`/studies/`, config);
+  // else response = await fetch(`/studies/?search=${toSearch}`, config);
+  if (toSearch === '') response = await fetch(`${baseUrl}/studies/`, config);
+  else response = await fetch(`${baseUrl}/studies/?search=${toSearch}`, config);
   const data = await response.json();
 
   dispatch(searchData(data));
