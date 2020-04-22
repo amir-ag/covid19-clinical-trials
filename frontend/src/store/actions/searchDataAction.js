@@ -19,10 +19,10 @@ export const searchDataAction = (toSearch) => async (dispatch, getState) => {
   };
 
   let response = null;
-  // if (toSearch === '') response = await fetch(`/studies/`, config);
-  // else response = await fetch(`/studies/?search=${toSearch}`, config);
-  if (toSearch === '') response = await fetch(`${baseUrl}/studies/`, config);
-  else response = await fetch(`${baseUrl}/studies/?search=${toSearch}`, config);
+  if (toSearch === '') response = await fetch(`/studies/search/`, config);
+  else response = await fetch(`/studies/search/?search=${toSearch}`, config);
+  // if (toSearch === '') response = await fetch(`${baseUrl}/studies/search/`, config);
+  // else response = await fetch(`${baseUrl}/studies/search/?search=${toSearch}`, config);
   const data = await response.json();
 
   dispatch(searchData(data));

@@ -51,8 +51,11 @@ function Map(props) {
   }
 
   const showClinicInfo = (clinic) => {
-    setSelectedClinic(clinic);
-    //props.dispatch(sidebarDataAction(clinic));
+    console.log("clinic ", clinic)
+
+    if(clinic.clinics.length === 1 ) setSelectedClinic(clinic.clinics[0]);
+    else setSelectedClinic({...clinic, BriefTitle: `${clinic.clinics.length} studies are available.`});
+    props.dispatch(sidebarDataAction(clinic.clinics));
   }
 
   const hideClinicInfo = () => {
