@@ -14,17 +14,18 @@ function App() {
     <>
       <Router>
         <Header />
-        <div style={{display: "flex"}}>
+        {/* <div style={{display: "flex"}}> */}
           <Sidebar />
           <Switch>
             <Route exact path='/' component={MapWrapper} />
           </Switch>
-        </div>
+        {/* </div> */}
         <Footer />
       </Router>
     </>
   );
 }
+
 
 export default App;
 
@@ -43,9 +44,9 @@ export default App;
 // const MapWithAMarkerClusterer = compose(
 //   withProps({
 //     googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCTnTT4eg4Qjz7JA0BL8l7JjxFxQvhpw-s&v=3.exp&libraries=geometry,drawing,places",
-//     loadingElement: <div style={{ height: `100%` }} />,
-//     containerElement: <div style={{ height: `400px` }} />,
-//     mapElement: <div style={{ height: `100%` }} />,
+//     loadingElement: <div style={{ height: `100vh` }} />,
+//     containerElement: <div style={{ height: `100vh` }} />,
+//     mapElement: <div style={{ height: `100vh` }} />,
 //   }),
 //   withHandlers({
 //     onMarkerClustererClick: () => (markerClusterer) => {
