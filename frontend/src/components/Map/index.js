@@ -1,8 +1,9 @@
+
 import React, { useState, useEffect } from "react";
 import {
   GoogleMap,
   Marker,
-  InfoWindow
+  InfoWindow,
 } from "react-google-maps";
 
 import mapDarkStyle from "../../assets/mapStyle/mapStyles";
@@ -14,6 +15,8 @@ import  { sidebarDataAction } from '../../store/actions/sidebarDataAction';
 import { mapDataAction } from '../../store/actions/mapDataAction';
 import './index.css';
 import UserMenu from "../UserMenu";
+
+const { MarkerClusterer } = require("react-google-maps/lib/components/addons/MarkerClusterer");
 
 function Map(props) {
   //const [countriesInfo, setCountriesInfo] = useState([]);
@@ -51,8 +54,11 @@ function Map(props) {
   }
 
   const showClinicInfo = (clinic) => {
-    setSelectedClinic(clinic);
-    //props.dispatch(sidebarDataAction(clinic));
+    console.log("clinic ", clinic)
+
+    if(clinic.clinics.length === 1 ) setSelectedClinic(clinic.clinics[0]);
+    else setSelectedClinic({...clinic, BriefTitle: `${clinic.clinics.length} studies are available.`});
+    props.dispatch(sidebarDataAction(clinic.clinics));
   }
 
   const hideClinicInfo = () => {
@@ -113,27 +119,28 @@ function Map(props) {
       />
     )}
 
+    {console.log("Markers: ", props)}
     {/* rendering the clinics position */}
-    {
-      props.data.map((clinic, index) => {
-        if(clinic.Latitude && clinic.Longitude){
-          return (
-            <Marker 
-              key={index} 
-              position={{ lat: clinic.Latitude, lng: clinic.Longitude }}
-              icon={{
-                url: `/locationMarker.svg`,
-                scaledSize: new window.google.maps.Size(25, 25)
-              }}
-              onClick={toggleSideBar}
-              onMouseOut={hideClinicInfo}
-              onMouseOver={() => { showClinicInfo(clinic) }}
-            >
-            </Marker>
-          )
-        }
-      })
-    }
+      {
+        props.data.map((clinic, index) => {
+          if(clinic.Latitude && clinic.Longitude){
+            return (
+              <Marker 
+                key={index} 
+                position={{ lat: clinic.Latitude, lng: clinic.Longitude }}
+                icon={{
+                  url: `/locationMarker.svg`,
+                  scaledSize: new window.google.maps.Size(25, 25)
+                }}
+                onClick={toggleSideBar}
+                onMouseOut={hideClinicInfo}
+                onMouseOver={() => { showClinicInfo(clinic) }}
+              >
+              </Marker>
+            )
+          }
+        })
+      }
 
     {/* rendering the onMouseOver clinic info */}
     { selectedClinic && (
@@ -158,10 +165,9 @@ function Map(props) {
   );
 }
 
-const mapStateToProps = ({ buttonThemeStateReducer, mapDataReducer: { data } }) => {
+const mapStateToProps = ({ buttonThemeStateReducer }) => {
   return {
     checked: buttonThemeStateReducer.checked,
-    data: data
   };
 };
 
