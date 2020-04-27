@@ -1,13 +1,8 @@
-import requests
-import os
-import django
-
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings')
-django.setup()
-import schedule
 import time
+from django.core.management.base import BaseCommand
 from project.studies.models import Study
-studies = Study.objects.values()
+import requests
+
 
 url = "https://clinicaltrials.gov/api/query/study_fields?expr=COVID-19&fields=NCTId%2CBriefTitle%2CBriefSummary%2COverallStatus%2CCentralContactEMail%2CCentralContactName%2CCentralContactPhone%2CLocationFacility%2CLeadSponsorName%2CLocationCity%2CLocationState%2CLocationZip%2CLocationCountry%2CInterventionDescription%2CInterventionName&min_rnk=1&max_rnk=1000&fmt=json"
 r = requests.get(url)
@@ -65,13 +60,16 @@ def get_studies():
             row.delete()
     print('delete_count:', delete_count)
 
-# if __name__ == '__main__':
-#     get_studies()
-
-# schedule.every().day.at("15:20").do(get_studies)
-schedule.every(10).seconds.do(get_studies)
 
 
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+
+class Command(BaseCommand):
+    help = 'fetch studies and add location coordinates'
+
+    def handle(self, *args, **options):
+        while True:
+            time.sleep(10)
+            get_studies()
+
+  # localtime = time.localtime()
+  # result = time.strftime("%I:%M:%S %p", localtime)
