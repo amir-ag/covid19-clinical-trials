@@ -15,6 +15,7 @@ results = r.json()
 
 
 def get_studies():
+    print('running get_studies')
     count = 0
     for entry in results["StudyFieldsResponse"]["StudyFields"]:
         try:
@@ -51,6 +52,8 @@ def get_studies():
                     LocationCountry=entry['LocationCountry'][location]
                 )
                 obj.save()
+        except:
+            continue
         print(count)
 
     #clean up db for double occurences
@@ -62,11 +65,13 @@ def get_studies():
             row.delete()
     print('delete_count:', delete_count)
 
-if __name__ == '__main__':
-    get_studies()
+# if __name__ == '__main__':
+#     get_studies()
 
-# schedule.every().day.at("02:20").do(get_studies)
-#
+# schedule.every().day.at("15:20").do(get_studies)
+# schedule.every(10).seconds.do(get_studies)
+
+
 # while True:
 #     schedule.run_pending()
 #     time.sleep(1)

@@ -1,8 +1,8 @@
 import os
 import django
 from geopy.geocoders import GoogleV3
-# import schedule
-# import time
+import schedule
+import time
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings')
 django.setup()
@@ -11,6 +11,7 @@ from project.studies.models import Study
 
 
 def get_coordinates():
+    print('running get_coordinates')
     studies = Study.objects.values()
     geolocator = GoogleV3(api_key="AIzaSyCTnTT4eg4Qjz7JA0BL8l7JjxFxQvhpw-s", timeout=100)
     for study in studies:
@@ -79,12 +80,14 @@ def get_coordinates():
                     entry.save()
                     print("location data added and saved")
 
-if __name__ == '__main__':
-    get_coordinates()
+# if __name__ == '__main__':
+#     get_coordinates()
 
 
 # schedule.every().day.at("02:30").do(get_coordinates)
-#
-# while True:
-#     schedule.run_pending()
-#     time.sleep(1)
+schedule.every(10).seconds.do(get_coordinates)
+
+
+while True:
+    schedule.run_pending()
+    time.sleep(1)
