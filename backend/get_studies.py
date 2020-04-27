@@ -65,8 +65,8 @@ def get_studies():
             row.delete()
     print('delete_count:', delete_count)
 
-# if __name__ == '__main__':
-#     get_studies()
+if __name__ == '__main__':
+    get_studies()
 
 # schedule.every().day.at("15:20").do(get_studies)
 # schedule.every(10).seconds.do(get_studies)
