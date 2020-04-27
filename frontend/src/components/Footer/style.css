@@ -1,7 +1,7 @@
 :root {
   --footer-main-padding: 30px;
   --footer-main-height: 70px;
-  --footer-main-background-color: #0a120e;
+  --footer-main-background-color: #151c28; /* #0a120e */
 }
 
 .footer-main {
