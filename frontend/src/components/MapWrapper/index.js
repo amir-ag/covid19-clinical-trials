@@ -33,9 +33,10 @@ const MapWithAMarkerClusterer = compose(
       const clickedMarkers = markerClusterer.getMarkers();
     },
   }),
-  withScriptjs,
-  withGoogleMap
-)(props =>
+   withScriptjs,
+   withGoogleMap
+)
+(props =>
   <GoogleMap
     defaultZoom={ 2.9 } 
     defaultCenter={{ lat: 15.7077507, lng: 10.1365919 }} 
@@ -79,7 +80,6 @@ const MapWithAMarkerClusterer = compose(
         }}
       />
     )}
-
     {/* rendering the clinics position */}
     <MarkerClusterer
       onClick={props.onMarkerClustererClick}
@@ -181,18 +181,6 @@ function MapWrapper(props) {
     setShowUserLocation(!showUserLocation)
   }
 
-  const markersWithSamePosition = (allMarkers) => {
-    if (allMarkers.length != 0) {
-      for (let i=0; i < allMarkers.length; i++) {
-        const marker = allMarkers[i];
-        //update the position of the coincident marker by applying a small multipler to its coordinates
-        marker.Latitude = marker.Latitude + (Math.random() -.5) / 1500;// * (Math.random() * (max - min) + min);
-        marker.Longitude = marker.Longitude + (Math.random() -.5) / 1500;// * (Math.random() * (max - min) + min);
-      }
-    }
-    return allMarkers;
-  }
-
   return (
     <MapWithAMarkerClusterer 
       markers={props.data} 
@@ -206,14 +194,13 @@ function MapWrapper(props) {
       showUserLocation={showUserLocation}
       userLocation={userLocation}
       userLocationHandler={userLocationHandler}
-      markersWithSamePosition={markersWithSamePosition}
     />
   )
 }
 
 
 const mapStateToProps = ({ buttonThemeStateReducer, mapDataReducer: { data } }) => {
-  //console.log("mapToProps: ", data)
+  console.log("mapToProps: ", data)
   return {
     checked: buttonThemeStateReducer.checked,
     data: data

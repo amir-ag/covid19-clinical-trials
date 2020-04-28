@@ -12,7 +12,7 @@ export const mapDataReducer = (state = initState, action) => {
           return { data: [...action.payload] }
         }
         case SEARCH_DATA: {
-            return { data: [...action.payload] }
+          return { data: [...action.payload] }
         }
         case STATUS_OPTION_DATA: {
           return { data: [...action.payload] }
