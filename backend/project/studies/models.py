@@ -31,4 +31,4 @@ class StudiesAggregatedByLocation(models.Model):
     Studies = ArrayField(models.TextField(verbose_name="studies", blank=True, null=True), default=list)
 
     def __str__(self):
-        return f"{Latitude: {self.Latitude} Longitude: {self.Longitude}"
+        return f"Latitude: {self.Latitude} Longitude: {self.Longitude}"
