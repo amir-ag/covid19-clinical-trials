@@ -217,11 +217,9 @@ function MapWrapper(props) {
   )
 }
 
-// export default App;
-
 
 const mapStateToProps = ({ buttonThemeStateReducer, mapDataReducer: { data } }) => {
-  console.log("mapToProps: ", data)
+  //console.log("mapToProps: ", data)
   return {
     checked: buttonThemeStateReducer.checked,
     data: data
