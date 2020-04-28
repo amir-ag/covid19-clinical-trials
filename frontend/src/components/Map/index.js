@@ -13,13 +13,14 @@ import { faCrosshairs } from '@fortawesome/free-solid-svg-icons';
 import { connect } from 'react-redux';
 import  { sidebarDataAction } from '../../store/actions/sidebarDataAction';
 import { mapDataAction } from '../../store/actions/mapDataAction';
-import './index.css';
+
 import UserMenu from "../UserMenu";
+
+import './index.css';
 
 const { MarkerClusterer } = require("react-google-maps/lib/components/addons/MarkerClusterer");
 
 function Map(props) {
-  //const [countriesInfo, setCountriesInfo] = useState([]);
   const [selectedClinic, setSelectedClinic] = useState(null);
   const [userLocation, setUserLocation] = useState(null);
   const [showUserLocation, setShowUserLocation] = useState(true);
@@ -95,9 +96,9 @@ function Map(props) {
       minZoom: 2.7,
     }}
     >
-    
+      
     <UserMenu />
-
+    
     {/* rendering user position button */}
     {
       <button className="btn-location" onClick={userLocationHandler}>

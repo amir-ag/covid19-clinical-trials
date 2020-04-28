@@ -10,7 +10,6 @@ import './index.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCrosshairs } from '@fortawesome/free-solid-svg-icons';
 
-import UserMenu from "../UserMenu";
 
 const { compose, withProps, withHandlers } = require("recompose");
 const {
@@ -62,9 +61,6 @@ const MapWithAMarkerClusterer = compose(
     }}
   >
 
-    {/* user menu button */}
-    <UserMenu />
-
     {/* rendering user position button */}
     {
       <button className="btn-location" onClick={props.userLocationHandler}>
@@ -80,7 +76,7 @@ const MapWithAMarkerClusterer = compose(
           lng: props.userLocation.coords.longitude
         }}
         icon={{
-          url: `/userLocationIcon.gif`,
+          url: `/userLocationIcon.svg`,
           scaledSize: new window.google.maps.Size(25, 25)
         }}
       />

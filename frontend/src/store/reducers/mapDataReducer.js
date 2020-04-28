@@ -1,5 +1,6 @@
 import { MAP_DATA } from "../types";
 import { SEARCH_DATA } from "../types";
+import { STATUS_OPTION_DATA } from "../types";
 
 const initState = {
   data: []
@@ -12,6 +13,9 @@ export const mapDataReducer = (state = initState, action) => {
         }
         case SEARCH_DATA: {
             return { data: [...action.payload] }
+        }
+        case STATUS_OPTION_DATA: {
+          return { data: [...action.payload] }
         }
         default:
           return state;
