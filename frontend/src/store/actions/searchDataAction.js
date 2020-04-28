@@ -24,7 +24,6 @@ export const searchDataAction = (toSearch) => async (dispatch, getState) => {
   if (toSearch === '') response = await fetch(`${baseUrl}/studies/search/`, config);
   else response = await fetch(`${baseUrl}/studies/search/?search=${toSearch}`, config);
   const data = await response.json();
-  console.log("data type: ", typeof(data))
 
   const aggregatedData = [{
       Latitude: data[0]['Latitude'],
