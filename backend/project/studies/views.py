@@ -1,6 +1,6 @@
 from rest_framework.generics import ListAPIView
 from project.studies.models import Study, StudiesAggregatedByLocation
-from project.studies.serializers import StudySerializer, StudiesAggregatedByLocationSerialize
+from project.studies.serializers import StudySerializer, StudiesAggregatedByLocationSerializer
 from rest_framework import filters
 from django.core import serializers
 from django.db.models import Q

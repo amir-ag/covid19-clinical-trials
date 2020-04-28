@@ -4,8 +4,7 @@ import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings')
 django.setup()
 
-from project.studies.models import Study
-# new model import
+from project.studies.models import Study, StudiesAggregatedByLocation
 
 def create_coordinates_table():
     studies = Study.objects.values()
@@ -41,10 +40,10 @@ def create_coordinates_table():
                 'clinics': [studies[i]]
             })
     for entry in data:
-        obj = Model(
+        obj = StudiesAggregatedByLocation(
             Latitude=entry['Latitude'],
             Longitude=entry['Longitude'],
-            clinics=entry['clinics'])
+            Studies=entry['clinics'])
         obj.save()
 
 
