@@ -17,7 +17,7 @@ function App() {
       <Router>
         <Header />
           <Sidebar />
-          <UserMenu />
+          {/* <UserMenu /> */}
           <DropDownMenu />
           <div className="authors">
             <p>Map developed by Dr. Amine Korchi, Singularity Consulting Switzerland & Propulsion Academy Zurich.</p>

@@ -38,10 +38,10 @@ const customTheme = (theme) => {
         borderRadius: 0,
         borderColor: '#062540',
       
-      // Removes weird border around container
+      // Removes weird border
       boxShadow: state.isFocused ? null : null,
       '&:hover': {
-        // Overwrittes the different states of border
+        // Overwrittes the border
         borderColor: '#062540'
       },
       '&:focus': {
@@ -71,12 +71,9 @@ const DropDownMenu = (props) => {
 
     const handleChange = (selectedOption) => {
         setSelectedOption(selectedOption)
-        console.log(`Option selected:`, selectedOption);
       };
 
     const onclickHandler = async (event) => {
-        console.log("clicked")
-        console.log("selectedOption", selectedOption)
         event.preventDefault();
         await props.dispatch(statusDataAction(selectedOption));
     }
