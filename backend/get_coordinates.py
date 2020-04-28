@@ -20,7 +20,8 @@ def get_coordinates():
                 print(search_term)
                 location = geolocator.geocode(f'{search_term}')
                 if location:
-                    entry = Study.objects.get(NCTId=study['NCTId'], LocationFacility=study['LocationFacility'], LocationZip=study['LocationZip'])
+                    print(study['NCTId'])
+                    entry = Study.objects.get(NCTId=study['NCTId'], LocationFacility=study['LocationFacility'], LocationZip=study['LocationZip'], LocationCity=study['LocationCity'])
                     entry.Latitude = location.latitude
                     entry.Longitude = location.longitude
                     entry.save()
