@@ -17,3 +17,27 @@ code {
     monospace;
 }
 
+.authors {
+  position: absolute;
+  z-index: 1;
+  bottom: 70px;
+  left: 20px;
+  color: white;
+  font-size: small;
+}
+
+.legal-right {
+  display: flex;
+  position: absolute;
+  width: 360px;
+  justify-content: space-between;
+  z-index: 1;
+  bottom: 70px;
+  right: 20px;
+  color: white;
+  font-size: small;
+}
+.legal-right a { 
+  color: inherit; 
+}
+

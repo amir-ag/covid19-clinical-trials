@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from project.studies.models import Study
+from project.studies.models import Study, StudiesAggregatedByLocation
 
 
 class StudySerializer(serializers.ModelSerializer):
@@ -12,3 +12,9 @@ class StudySerializer(serializers.ModelSerializer):
     @staticmethod
     def get_visitStudy(self):
         return f"https://clinicaltrials.gov/ct2/show/{self.NCTId}"
+
+
+class StudiesAggregatedByLocationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = StudiesAggregatedByLocation
+        fields = '__all__'

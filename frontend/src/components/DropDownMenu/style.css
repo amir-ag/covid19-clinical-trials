@@ -1,0 +1,38 @@
+
+.status-container {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 90px;
+    left: 727px;
+}
+
+.status-wrapper {
+    width: 265px;
+    color: gray;
+}
+
+.status-wrapper span {
+    align-self: stretch;
+    background-color: hsl(0,0%,80%);
+    margin-bottom: 8px;
+    margin-top: 8px;
+    width: 1px;
+    box-sizing: border-box;
+}
+
+.status-container button {
+    border: 1px solid #062540;
+    border-left: none;
+    float: right;
+    padding: 6px 18px;
+    background: white;
+    font-size: 17px;
+    cursor: pointer;
+  }
+  
+  .status-container button:hover {
+    background: #ddd;
+  }
+
+

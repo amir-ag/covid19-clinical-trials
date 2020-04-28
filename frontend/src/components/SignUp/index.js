@@ -8,7 +8,7 @@ export default function SignUp(props) {
     const [password, setPassword] = useState('');
     const [passwordRepeat, setPasswordRepeat] = useState('');
     const [registerStep, setRegisterStep] = useState(0);
-    const [isInputFieldValid, setValidInputField] = useState(-1);
+    //const [isInputFieldValid, setValidInputField] = useState(-1);
 
     useEffect(() => {
         formStepIndicator(0);

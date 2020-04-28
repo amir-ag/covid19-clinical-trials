@@ -1,7 +1,7 @@
 import { BUTTON_THEME_STATE } from '../types';
 
 const initialState = {
-  checked: false
+  checked: true
 };
 
 export const buttonThemeStateReducer = (state = initialState, action) => {

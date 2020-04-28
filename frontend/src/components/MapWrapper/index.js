@@ -10,7 +10,6 @@ import './index.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCrosshairs } from '@fortawesome/free-solid-svg-icons';
 
-import UserMenu from "../UserMenu";
 
 const { compose, withProps, withHandlers } = require("recompose");
 const {
@@ -31,9 +30,7 @@ const MapWithAMarkerClusterer = compose(
   }),
   withHandlers({
     onMarkerClustererClick: () => (markerClusterer) => {
-      const clickedMarkers = markerClusterer.getMarkers()
-      console.log(`Current clicked markers length: ${clickedMarkers.length}`)
-      console.log(clickedMarkers)
+      const clickedMarkers = markerClusterer.getMarkers();
     },
   }),
   withScriptjs,
@@ -62,9 +59,6 @@ const MapWithAMarkerClusterer = compose(
     }}
   >
 
-    {/* user menu button */}
-    <UserMenu />
-
     {/* rendering user position button */}
     {
       <button className="btn-location" onClick={props.userLocationHandler}>
@@ -80,7 +74,7 @@ const MapWithAMarkerClusterer = compose(
           lng: props.userLocation.coords.longitude
         }}
         icon={{
-          url: `/userLocationIcon.gif`,
+          url: `/userLocationIcon.svg`,
           scaledSize: new window.google.maps.Size(25, 25)
         }}
       />
@@ -155,8 +149,6 @@ function MapWrapper(props) {
   }
 
   const showClinicInfo = (clinic) => {
-    console.log("clinic ", clinic)
-
     if(clinic.clinics.length === 1 ) setSelectedClinic(clinic.clinics[0]);
     else setSelectedClinic({...clinic, BriefTitle: `${clinic.clinics.length} studies are available.`});
     props.dispatch(sidebarDataAction(clinic.clinics));
@@ -191,8 +183,6 @@ function MapWrapper(props) {
 
   const markersWithSamePosition = (allMarkers) => {
     if (allMarkers.length != 0) {
-      console.log("some position")
-      console.log("allMarkers", allMarkers)
       for (let i=0; i < allMarkers.length; i++) {
         const marker = allMarkers[i];
         //update the position of the coincident marker by applying a small multipler to its coordinates
@@ -221,11 +211,9 @@ function MapWrapper(props) {
   )
 }
 
-// export default App;
-
 
 const mapStateToProps = ({ buttonThemeStateReducer, mapDataReducer: { data } }) => {
-  console.log("mapToProps: ", data)
+  //console.log("mapToProps: ", data)
   return {
     checked: buttonThemeStateReducer.checked,
     data: data
