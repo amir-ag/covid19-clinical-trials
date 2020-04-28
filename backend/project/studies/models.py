@@ -23,3 +23,12 @@ class Study(models.Model):
 
     def __str__(self):
         return f"{self.BriefTitle} by {self.LocationFacility}"
+
+    
+class StudiesAggregatedByLocation(models.Model):
+    Latitude = models.FloatField(verbose_name="latitude", blank=True, null=True)
+    Longitude = models.FloatField(verbose_name="longitude", blank=True, null=True)
+    Studies = ArrayField(models.TextField(verbose_name="studies", blank=True, null=True), default=list)
+
+    def __str__(self):
+        return f"{Latitude: {self.Latitude} Longitude: {self.Longitude}"
