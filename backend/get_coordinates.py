@@ -11,6 +11,7 @@ from project.studies.models import Study
 
 
 def get_coordinates():
+    print('running get_coordinates')
     studies = Study.objects.values()
     geolocator = GoogleV3(api_key="AIzaSyCTnTT4eg4Qjz7JA0BL8l7JjxFxQvhpw-s", timeout=100)
     for study in studies:
@@ -84,6 +85,8 @@ if __name__ == '__main__':
 
 
 # schedule.every().day.at("02:30").do(get_coordinates)
+# schedule.every(10).seconds.do(get_coordinates)
+
 #
 # while True:
 #     schedule.run_pending()
