@@ -15,6 +15,7 @@ import  { sidebarDataAction } from '../../store/actions/sidebarDataAction';
 import { mapDataAction } from '../../store/actions/mapDataAction';
 import './index.css';
 import UserMenu from "../UserMenu";
+import ReactLoading from "react-loading";
 
 const { MarkerClusterer } = require("react-google-maps/lib/components/addons/MarkerClusterer");
 
@@ -25,10 +26,13 @@ function Map(props) {
   const [showUserLocation, setShowUserLocation] = useState(true);
   const [mapCenter, setMapCenter] = useState({ lat: 15.7077507, lng: 10.1365919 })
   const [mapZoom, setMapZoom] = useState(2.9);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => { 
       const fetchData = async () => {
+        setLoading(true)
         await props.dispatch(mapDataAction());
+        setLoading(false)
     }
     fetchData();
   }, []);
@@ -73,17 +77,17 @@ function Map(props) {
   }
 
   return (
-    <GoogleMap 
-    defaultZoom={ 2.9 } 
-    defaultCenter={{ lat: 15.7077507, lng: 10.1365919 }} 
-    defaultOptions={{ 
+    <GoogleMap
+    defaultZoom={ 2.9 }
+    defaultCenter={{ lat: 15.7077507, lng: 10.1365919 }}
+    defaultOptions={{
                       styles: '',
                       zoomControlOptions: { position: 8 },
                       streetViewControl:false,
                       fullscreenControl:false,
                       mapTypeControl: false,
                       minZoom: 2.7
-                    }} 
+                    }}
     zoom={ mapZoom }
     center={ mapCenter }
     options={{
@@ -95,7 +99,7 @@ function Map(props) {
       minZoom: 2.7,
     }}
     >
-    
+
     <UserMenu />
 
     {/* rendering user position button */}
@@ -105,7 +109,7 @@ function Map(props) {
       </button>
     }
 
-    {/* rendering user position */}  
+    {/* rendering user position */}
     { userLocation && !showUserLocation && (
       <Marker
         position={{
@@ -121,12 +125,35 @@ function Map(props) {
 
     {console.log("Markers: ", props)}
     {/* rendering the clinics position */}
+    {!props.data.Latitude && !props.data.Longitude ? (
+      <ReactLoading type={"spin"} color={"var(--mainBurgund"}/>
+      ) : (
+        props.data.map((clinic, index) => {
+          if(clinic.Latitude && clinic.Longitude){
+            return (
+              <Marker
+                key={index}
+                position={{ lat: clinic.Latitude, lng: clinic.Longitude }}
+                icon={{
+                  url: `/locationMarker.svg`,
+                  scaledSize: new window.google.maps.Size(25, 25)
+                }}
+                onClick={toggleSideBar}
+                onMouseOut={hideClinicInfo}
+                onMouseOver={() => { showClinicInfo(clinic) }}
+              >
+              </Marker>
+            )
+          }
+        })
+      )
+    }
       {
         props.data.map((clinic, index) => {
           if(clinic.Latitude && clinic.Longitude){
             return (
-              <Marker 
-                key={index} 
+              <Marker
+                key={index}
                 position={{ lat: clinic.Latitude, lng: clinic.Longitude }}
                 icon={{
                   url: `/locationMarker.svg`,
@@ -144,7 +171,7 @@ function Map(props) {
 
     {/* rendering the onMouseOver clinic info */}
     { selectedClinic && (
-      <InfoWindow 
+      <InfoWindow
         position={{
           lat: selectedClinic.Latitude,
           lng: selectedClinic.Longitude
@@ -153,7 +180,7 @@ function Map(props) {
           pixelOffset: new window.google.maps.Size(0,-30),
           maxWidth: '250'
         }}
-        
+
       >
         <div style={{ textAlign: 'center' }}>
           <h3>{selectedClinic.BriefTitle}</h3>
