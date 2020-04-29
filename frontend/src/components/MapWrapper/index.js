@@ -26,16 +26,17 @@ const MapWithAMarkerClusterer = compose(
     googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCTnTT4eg4Qjz7JA0BL8l7JjxFxQvhpw-s&v=3.exp&libraries=geometry,drawing,places",
     loadingElement: <div style={{ height: `100vh` }} />,
     containerElement: <div style={{ height: `100vh` }} />,
-    mapElement: <div style={{ height: `100vh` }} />,
+    mapElement: <div className="map-element" style={{ height: `100vh` }} />,
   }),
   withHandlers({
     onMarkerClustererClick: () => (markerClusterer) => {
-      const clickedMarkers = markerClusterer.getMarkers();
-    },
+      //const clickedMarkers = markerClusterer.getMarkers();
+    }
   }),
-  withScriptjs,
-  withGoogleMap
-)(props =>
+   withScriptjs,
+   withGoogleMap
+)
+(props =>
   <GoogleMap
     defaultZoom={ 2.9 } 
     defaultCenter={{ lat: 15.7077507, lng: 10.1365919 }} 
@@ -79,35 +80,36 @@ const MapWithAMarkerClusterer = compose(
         }}
       />
     )}
-
     {/* rendering the clinics position */}
-    <MarkerClusterer
-      onClick={props.onMarkerClustererClick}
-      averageCenter
-      enableRetinaIcons
-      gridSize={50}
-    >
-      {
-        props.markers.map((clinic, index) => {
-          if(clinic.Latitude && clinic.Longitude){
-            return (
-              <Marker 
-                key={index} 
-                position={{ lat: clinic.Latitude, lng: clinic.Longitude }}
-                icon={{
-                  url: `/locationMarker.svg`,
-                  scaledSize: new window.google.maps.Size(25, 25)
-                }}
-                onClick={props.toggleSideBar}
-                onMouseOut={props.hideClinicInfo}
-                onMouseOver={() => { props.showClinicInfo(clinic) }}
-              >
-              </Marker>
-            )
-          }
-        })
-      }
-    </MarkerClusterer>
+    <div key={new Date().getTime()}>
+      <MarkerClusterer
+        onClick={props.onMarkerClustererClick}
+        averageCenter
+        enableRetinaIcons
+        gridSize={50}
+      >
+        {
+          props.markers.map((clinic, index) => {
+            if(clinic.Latitude && clinic.Longitude){
+              return (
+                <Marker
+                  key={index} 
+                  position={{ lat: clinic.Latitude, lng: clinic.Longitude }}
+                  icon={{
+                    url: `/locationMarker.svg`,
+                    scaledSize: new window.google.maps.Size(25, 25)
+                  }}
+                  onClick={props.toggleSideBar}
+                  onMouseOut={props.hideClinicInfo}
+                  onMouseOver={() => { props.showClinicInfo(clinic) }}
+                >
+                </Marker>
+              )
+            }
+          })
+        }
+      </MarkerClusterer>
+    </div>
 
     {/* rendering the onMouseOver clinic info */}
     { props.selectedClinic && (
@@ -139,7 +141,9 @@ function MapWrapper(props) {
   
   useEffect(() => { 
       const fetchData = async () => {
+        document.body.classList.add('waiting');
         await props.dispatch(mapDataAction());
+        document.body.classList.remove('waiting');
     }
     fetchData();
   }, []);
@@ -181,18 +185,6 @@ function MapWrapper(props) {
     setShowUserLocation(!showUserLocation)
   }
 
-  const markersWithSamePosition = (allMarkers) => {
-    if (allMarkers.length != 0) {
-      for (let i=0; i < allMarkers.length; i++) {
-        const marker = allMarkers[i];
-        //update the position of the coincident marker by applying a small multipler to its coordinates
-        marker.Latitude = marker.Latitude + (Math.random() -.5) / 1500;// * (Math.random() * (max - min) + min);
-        marker.Longitude = marker.Longitude + (Math.random() -.5) / 1500;// * (Math.random() * (max - min) + min);
-      }
-    }
-    return allMarkers;
-  }
-
   return (
     <MapWithAMarkerClusterer 
       markers={props.data} 
@@ -206,7 +198,6 @@ function MapWrapper(props) {
       showUserLocation={showUserLocation}
       userLocation={userLocation}
       userLocationHandler={userLocationHandler}
-      markersWithSamePosition={markersWithSamePosition}
     />
   )
 }

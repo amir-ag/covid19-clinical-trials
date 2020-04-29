@@ -17,7 +17,9 @@ function SearchBar(props) {
 
     const onclickHandler = async (event) => {
         event.preventDefault();
+        document.body.classList.add('waiting');
         await props.dispatch(searchDataAction(search));
+        document.body.classList.remove('waiting');
 
     }
     return (

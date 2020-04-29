@@ -9,3 +9,8 @@ html[data-theme="dark"] {
   text-align: center;
 }
 
+body.waiting * {
+  cursor: progress;
+}
+
+
