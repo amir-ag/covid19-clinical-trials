@@ -4,11 +4,18 @@ import './style.css';
 import { connect } from 'react-redux';
 
 class Sidebar extends Component {
+
+  closeSideBarHandler = (event) => {
+    console.log("clicked")
+    event.preventDefault();
+    document.getElementsByClassName('sidebar-wrapper')[0].classList.toggle('active');
+  }
   render() {
     return (
       <>
           <div className='sidebar-wrapper'>
             <div className='sidebar-right'>
+              <span onClick={this.closeSideBarHandler}>X</span>
               {
                 this.props.clinics.map((clinic, index) => 
                   <div key={index} className="info">

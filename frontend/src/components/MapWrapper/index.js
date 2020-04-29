@@ -26,12 +26,12 @@ const MapWithAMarkerClusterer = compose(
     googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCTnTT4eg4Qjz7JA0BL8l7JjxFxQvhpw-s&v=3.exp&libraries=geometry,drawing,places",
     loadingElement: <div style={{ height: `100vh` }} />,
     containerElement: <div style={{ height: `100vh` }} />,
-    mapElement: <div style={{ height: `100vh` }} />,
+    mapElement: <div className="map-element" style={{ height: `100vh` }} />,
   }),
   withHandlers({
     onMarkerClustererClick: () => (markerClusterer) => {
-      const clickedMarkers = markerClusterer.getMarkers();
-    },
+      //const clickedMarkers = markerClusterer.getMarkers();
+    }
   }),
    withScriptjs,
    withGoogleMap
@@ -81,33 +81,35 @@ const MapWithAMarkerClusterer = compose(
       />
     )}
     {/* rendering the clinics position */}
-    <MarkerClusterer
-      onClick={props.onMarkerClustererClick}
-      averageCenter
-      enableRetinaIcons
-      gridSize={50}
-    >
-      {
-        props.markers.map((clinic, index) => {
-          if(clinic.Latitude && clinic.Longitude){
-            return (
-              <Marker 
-                key={index} 
-                position={{ lat: clinic.Latitude, lng: clinic.Longitude }}
-                icon={{
-                  url: `/locationMarker.svg`,
-                  scaledSize: new window.google.maps.Size(25, 25)
-                }}
-                onClick={props.toggleSideBar}
-                onMouseOut={props.hideClinicInfo}
-                onMouseOver={() => { props.showClinicInfo(clinic) }}
-              >
-              </Marker>
-            )
-          }
-        })
-      }
-    </MarkerClusterer>
+    <div key={new Date().getTime()}>
+      <MarkerClusterer
+        onClick={props.onMarkerClustererClick}
+        averageCenter
+        enableRetinaIcons
+        gridSize={50}
+      >
+        {
+          props.markers.map((clinic, index) => {
+            if(clinic.Latitude && clinic.Longitude){
+              return (
+                <Marker
+                  key={index} 
+                  position={{ lat: clinic.Latitude, lng: clinic.Longitude }}
+                  icon={{
+                    url: `/locationMarker.svg`,
+                    scaledSize: new window.google.maps.Size(25, 25)
+                  }}
+                  onClick={props.toggleSideBar}
+                  onMouseOut={props.hideClinicInfo}
+                  onMouseOver={() => { props.showClinicInfo(clinic) }}
+                >
+                </Marker>
+              )
+            }
+          })
+        }
+      </MarkerClusterer>
+    </div>
 
     {/* rendering the onMouseOver clinic info */}
     { props.selectedClinic && (
@@ -139,7 +141,9 @@ function MapWrapper(props) {
   
   useEffect(() => { 
       const fetchData = async () => {
+        document.body.classList.add('waiting');
         await props.dispatch(mapDataAction());
+        document.body.classList.remove('waiting');
     }
     fetchData();
   }, []);

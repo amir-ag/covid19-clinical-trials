@@ -75,7 +75,9 @@ const DropDownMenu = (props) => {
 
     const onclickHandler = async (event) => {
         event.preventDefault();
+        document.body.classList.add('waiting');
         await props.dispatch(statusDataAction(selectedOption));
+        document.body.classList.remove('waiting');
     }
 
     return (
