@@ -21,25 +21,25 @@ export const statusDataAction = (toSearch) => async (dispatch, getState) => {
   let response = null;
   let statusToSearch = ''
 
-  if (!toSearch.length) response = await fetch(`/studies/`, config);
-  else {
-    for(let status of toSearch) {
-      statusToSearch += `${status.value},`
-    }
-    statusToSearch = statusToSearch.substring(0, statusToSearch.length - 1);
-
-    //console.log("statusToSearch: ", statusToSearch)
-    response = await fetch(`/studies/status/?search_status=${statusToSearch}`, config);
-  }
-
-  // if (!toSearch.length) response = await fetch(`${baseUrl}/studies/`, config);
+  // if (!toSearch.length) response = await fetch(`/studies/`, config);
   // else {
   //   for(let status of toSearch) {
   //     statusToSearch += `${status.value},`
   //   }
   //   statusToSearch = statusToSearch.substring(0, statusToSearch.length - 1);
-  //   response = await fetch(`${baseUrl}/studies/status/?search_status=${statusToSearch}`, config);
+
+  //   //console.log("statusToSearch: ", statusToSearch)
+  //   response = await fetch(`/studies/status/?search_status=${statusToSearch}`, config);
   // }
+
+  if (!toSearch.length) response = await fetch(`${baseUrl}/studies/`, config);
+  else {
+    for(let status of toSearch) {
+      statusToSearch += `${status.value},`
+    }
+    statusToSearch = statusToSearch.substring(0, statusToSearch.length - 1);
+    response = await fetch(`${baseUrl}/studies/status/?search_status=${statusToSearch}`, config);
+  }
 
   const data = await response.json();
 
