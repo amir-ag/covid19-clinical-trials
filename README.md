@@ -1,0 +1,1 @@
+This 3 week project should help matching probands and recruiting clinical trials related to covid-19. A beta version is currently deployed here: https://clinical-trials.propulsion-learn.ch/ 

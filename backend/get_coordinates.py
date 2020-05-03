@@ -12,7 +12,7 @@ from project.studies.models import Study
 def get_coordinates():
     print('running get_coordinates')
     studies = Study.objects.values()
-    geolocator = GoogleV3(api_key="AIzaSyCTnTT4eg4Qjz7JA0BL8l7JjxFxQvhpw-s", timeout=100)
+    geolocator = GoogleV3(api_key="google-maps-api-key", timeout=100)
     for study in studies:
         if not study["Latitude"]:
             if study["LocationFacility"]:
